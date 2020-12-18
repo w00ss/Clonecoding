@@ -133,19 +133,41 @@ header .button {
     border-radius: 50%;
 }
 
-nav {
+.long-nav, .short-nav {
     top: 56px;
     left: 0;
     bottom: 0;
-    width: 240px;
     background: #ffffff;
-    overflow: hidden;
     z-index: 999;
 }
 
-nav:hover {
+.long-nav {
+    width: 240px;
+    overflow: hidden;
+}
+
+.short-nav {
+    width: 72px;
+}
+
+.long-nav:hover {
     overflow-y: auto;
     overscroll-behavior: contain;
+}
+
+.short-tabs {
+    padding-top: 4px;
+}
+
+.short-tab {
+    flex-direction: column;
+    font-size: 10px;
+    padding: 16px 0 14px;
+}
+
+.short-tab p {
+    color: #606060;
+    margin: 6px 0 0;
 }
 
 .tabs {
@@ -176,7 +198,7 @@ nav:hover {
     border-radius: 50%;
 }
 
-.tab:hover {
+.tab:hover, .short-tab:hover {
     background: #eeeeee;
 }
 
@@ -190,12 +212,16 @@ nav:hover {
     background: none;
 }
 
-.selected {
+.tabs .selected {
     background: #e5e5e5;
 }
 
-.selected:hover {
+.tabs .selected:hover {
     background: #d9d9d9;
+}
+
+.short-tabs .selected p {
+    color: #cc0000;
 }
 
 .dot {
@@ -232,22 +258,36 @@ nav:hover {
 }
 
 main {
-    margin: 56px 0 40px 240px;
+    position: relative;
+    margin: 56px 0 0 240px;
     padding-top: 24px;
     max-width: 100%;
-    flex-direction: column;
+    overflow: hidden;
+}
+
+.main-container {
+    width: 1504px;
+    margin-bottom: 240px;
+}
+
+.short-margin {
+    margin: 56px 0 40px 72px;
 }
 
 .items {
     justify-content: flex-start;
     align-items: flex-start;
     flex-wrap: wrap;
-    max-width: 1504px;
 }
 
 .item {
+    display: inline-block;
+    width: 100%;
+    min-width: 310px;
     max-width: 360px;
+    height: auto;
     margin: 0 8px 40px;
+    flex-basis: 25%;
 }
 
 .thumbnail {
@@ -334,13 +374,13 @@ main {
     border-top: 4px solid #e0e0e0;
     border-bottom: 4px solid #e0e0e0;
     margin-bottom: 40px;
+    width: 100%;
 }
 
 .posts {
     justify-content: flex-start;
     align-items: flex-start;
     flex-wrap: wrap;
-    width: 1504px;
 }
 
 .post-more:hover {
@@ -356,7 +396,9 @@ main {
 .post {
     border: 1px solid #e0e0e0;
     background: #ffffff;
-    width: 360px;
+    width: 100%;
+    min-width: 310px;
+    max-width: 360px;
     height: 210px;
     margin: 0 8px 24px;
     padding: 12px 24px;
@@ -447,7 +489,7 @@ body, .post p, .info p {
     margin: 0;
 }
 
-a, .content p, .channel:hover {
+a, .content p, .channel p:hover {
     color: #030303;
 }
 
@@ -526,6 +568,7 @@ a, .content p, .channel:hover {
 
 .notification .uploaded {
     width: 232px;
+    flex: 1;
 }
 
 .notification .title {
@@ -608,4 +651,54 @@ div.tab {
 .right-box {
     left: auto !important;
     right: 0 !important;
+}
+
+.thumbnail-img {
+    max-width: 100%;
+}
+
+.short-item {
+    flex-basis: 19%;
+}
+
+.short-main {
+    width: 100%;
+    padding: 0 24px;
+}
+
+.tooltip {
+    position: relative;
+}
+
+.tooltip-box {
+    position: absolute;
+    top: -52px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #606060;
+    border-radius: 2px;
+    padding: 8px;
+    opacity: 0;
+    transition: all 100ms ease-in-out;
+    z-index: 100;
+}
+
+header .tooltip-box {
+    top: 60px;
+    left: 50%;
+    transform: translateX(-60%);
+}
+
+.tooltip .bottom {
+    top: 52px;
+    left: 50%;
+    transform: translateX(-30%);
+}
+
+.tooltip-box p {
+    margin: 0;
+    font-size: 12px;
+    white-space: nowrap;
+    z-index: 111;
+    color: #ffffff;
 }

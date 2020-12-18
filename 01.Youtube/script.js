@@ -1,4 +1,25 @@
+const navBtn = document.getElementById('menu');
+const main = document.querySelector('main');
+const navs = document.querySelectorAll('nav');
+const items = document.querySelectorAll('.item');
+const posts = document.querySelectorAll('.post');
+const mainContainer = document.querySelector('.main-container');
+
 const circleBtn = document.querySelectorAll('.circle');
+
+navBtn.addEventListener('click', () => {
+    navs.forEach(nav => {
+        nav.classList.toggle('d-hidden');
+    });
+    items.forEach(item => {
+        item.classList.toggle('short-item');
+    });
+    posts.forEach(post => {
+        post.classList.toggle('short-item');
+    });
+    main.classList.toggle('short-margin');
+    mainContainer.classList.toggle('short-main');
+});
 
 circleBtn.forEach(btn => {
     btn.addEventListener('mousedown', () => {
@@ -95,58 +116,55 @@ navLessBtn.addEventListener('click', () => {
     navMoreBtn.classList.toggle('d-hidden');
 });
 
-const items = document.querySelectorAll('.item');
-
 items.forEach(item => {
     const dots = item.querySelector('.more-dots');
     const tools = item.querySelector('.mouseover');
     const dropdown = item.querySelector('.drop-box');
     
-    item.addEventListener('mouseover', () => {
+    item.addEventListener('mouseenter', () => {
         dots.classList.remove('o-hidden');
-        tools.classList.toggle('d-hidden');
+        tools.classList.remove('d-hidden');
     });
 
-    item.addEventListener('mouseout', () => {
-        checkDots(dots, dropdown)
-        tools.classList.toggle('d-hidden');
+    item.addEventListener('mouseleave', () => {
+        dots.classList.add('o-hidden');
+        tools.classList.add('d-hidden');
     });
 
     const toolBox = tools.querySelectorAll('.box');
     toolBox.forEach(box => {
         const boxMore = box.querySelector('.box-more');
 
-        box.addEventListener('mouseover', () => {
+        box.addEventListener('mouseenter', () => {
             boxMore.style.transform = 'scaleX(1)';
             box.style.borderRadius = '0 2px 2px 0';
         });
 
-        box.addEventListener('mouseout', () => {
+        box.addEventListener('mouseleave', () => {
             boxMore.removeAttribute('style');
             box.removeAttribute('style');
         });
     });
 
     dots.addEventListener('click', () => {
+        const currentWidth = document.body.getBoundingClientRect().width;
+
         if(dropdown.classList.contains('d-hidden')){
-            hiddenDots();
             closeDrops();
             dropdown.classList.remove('d-hidden');
-            dots.classList.remove('o-hidden');
+
+            const dropWidth = dots.getBoundingClientRect().x + dropdown.getBoundingClientRect().width;
+            if(dropWidth > currentWidth) {
+                dropdown.classList.add('right-box');
+            } else {
+                dropdown.classList.remove('right-box');
+            }
+
         } else {
-            hiddenDots();
             closeDrops();
         }
     });
 });
-
-function checkDots(btn, box) {
-    if(box.classList.contains('d-hidden')) {
-        btn.classList.add('o-hidden');
-    } else {
-        btn.classList.remove('o-hidden');
-    }
-}
 
 function hiddenDots() {
     const dots = document.querySelectorAll('.more-dots');
@@ -161,12 +179,12 @@ const notiTabs = document.querySelectorAll('.notification .tab');
 notiTabs.forEach(tab => {
     const dots = tab.querySelector('.more-dots');
     
-    tab.addEventListener('mouseover', () => {
-        dots.classList.toggle('o-hidden');
+    tab.addEventListener('mouseenter', () => {
+        dots.classList.remove('o-hidden');
     });
 
-    tab.addEventListener('mouseout', () => {
-        dots.classList.toggle('o-hidden');
+    tab.addEventListener('mouseleave', () => {
+        dots.classList.add('o-hidden');
     });
 });
 
@@ -183,5 +201,36 @@ document.addEventListener('click', (e) => {
                 closeDrops();
             }
         }
+    });
+});
+
+const tooltips = document.querySelectorAll('.tooltip');
+
+tooltips.forEach(tooltip => {
+    const box = tooltip.querySelector('.tooltip-box');
+
+    tooltip.addEventListener('mouseenter', (e) => {
+
+        box.classList.remove('d-hidden');
+        
+        setTimeout(() => {
+            box.style.opacity = '0.95';
+        },10);
+    });
+
+    tooltip.addEventListener('mouseleave', () => {
+        box.removeAttribute('style');
+
+        setTimeout(() => {
+            box.classList.add('d-hidden');;
+        },100);
+    });
+
+    tooltip.addEventListener('click', () => {
+        box.removeAttribute('style');
+
+        setTimeout(() => {
+            box.classList.add('d-hidden');;
+        },100);
     });
 });

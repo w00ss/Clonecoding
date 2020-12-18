@@ -24,43 +24,54 @@
 
         <div id="search-bar" class="flex f-center">
             <input id="search" type="search" placeholder="검색">
-            <button class="button flex f-center">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M15.5 14H14.71L14.43 13.73C15.41 12.59 16 11.11 16 9.5C16 5.91 13.09 3 9.5 3C5.91 3 3 5.91 3 9.5C3 13.09 5.91 16 9.5 16C11.11 16 12.59 15.41 13.73 14.43L14 14.71V15.5L19 20.49L20.49 19L15.5 14ZM9.5 14C7.01 14 5 11.99 5 9.5C5 7.01 7.01 5 9.5 5C11.99 5 14 7.01 14 9.5C14 11.99 11.99 14 9.5 14Z" class="icon-default"/>
-                </svg>                    
-            </button>
+            <div class="tooltip">
+                <button class="button flex f-center">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.5 14H14.71L14.43 13.73C15.41 12.59 16 11.11 16 9.5C16 5.91 13.09 3 9.5 3C5.91 3 3 5.91 3 9.5C3 13.09 5.91 16 9.5 16C11.11 16 12.59 15.41 13.73 14.43L14 14.71V15.5L19 20.49L20.49 19L15.5 14ZM9.5 14C7.01 14 5 11.99 5 9.5C5 7.01 7.01 5 9.5 5C11.99 5 14 7.01 14 9.5C14 11.99 11.99 14 9.5 14Z" class="icon-default"/>
+                    </svg>                    
+                </button>
+                <div class="tooltip-box bottom d-hidden">
+                    <p>검색</p>
+                </div>
+            </div>
         </div>
 
         <div id="tools" class="flex f-center">
-            <div class="drop upload">
+            <div class="drop tooltip upload">
                 <div class="button flex f-center circle">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M17 10.5V7C17 6.45 16.55 6 16 6H4C3.45 6 3 6.45 3 7V17C3 17.55 3.45 18 4 18H16C16.55 18 17 17.55 17 17V13.5L21 17.5V6.5L17 10.5ZM14 13H11V16H9V13H6V11H9V8H11V11H14V13Z" fill="#606060"/>
                     </svg>
                 </div>
+                <div class="tooltip-box d-hidden">
+                    <p>만들기</p>
+                </div>
                 <div class="drop-box d-hidden">
                     <a class="tab flex f-center">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M19 4H5C4.48112 4.0351 3.99256 4.25708 3.62482 4.62482C3.25708 4.99256 3.0351 5.48112 3 6V18C3.0351 18.5189 3.25708 19.0074 3.62482 19.3752C3.99256 19.7429 4.48112 19.9649 5 20H19C19.5189 19.9649 20.0074 19.7429 20.3752 19.3752C20.7429 19.0074 20.9649 18.5189 21 18V6C20.9649 5.48112 20.7429 4.99256 20.3752 4.62482C20.0074 4.25708 19.5189 4.0351 19 4V4ZM5 18H19V6H5V18Z" fill="#606060"/>
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M15 12L10 8V16L15 12Z" fill="#FF0000"/>
+                            <path d="M19 4H5C4.48112 4.0351 3.99256 4.25708 3.62482 4.62482C3.25708 4.99256 3.0351 5.48112 3 6V18C3.0351 18.5189 3.25708 19.0074 3.62482 19.3752C3.99256 19.7429 4.48112 19.9649 5 20H19C19.5189 19.9649 20.0074 19.7429 20.3752 19.3752C20.7429 19.0074 20.9649 18.5189 21 18V6C20.9649 5.48112 20.7429 4.99256 20.3752 4.62482C20.0074 4.25708 19.5189 4.0351 19 4V4ZM5 18H19V6H5V18Z" fill="#606060"/>
+                            <path d="M15 12L10 8V16L15 12Z" fill="#FF0000"/>
                         </svg>
                         <p>동영상 업로드</p>
                     </a>
                     <a class="tab flex f-center">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M23 12C23.0005 13.4447 22.7163 14.8754 22.1639 16.2103C21.6114 17.5452 20.8013 18.7582 19.78 19.78L18.37 18.37C19.206 17.5342 19.8692 16.542 20.3217 15.4498C20.7742 14.3577 21.0071 13.1871 21.0071 12.005C21.0071 10.8229 20.7742 9.65229 20.3217 8.56017C19.8692 7.46805 19.206 6.47577 18.37 5.64L19.78 4.23C21.8402 6.2912 22.9983 9.08571 23 12ZM5.63999 5.64L4.21999 4.22C3.198 5.24151 2.38728 6.45437 1.83416 7.78929C1.28103 9.12421 0.996338 10.555 0.996338 12C0.996338 13.445 1.28103 14.8758 1.83416 16.2107C2.38728 17.5456 3.198 18.7585 4.21999 19.78L5.62999 18.37C4.79395 17.5342 4.13075 16.542 3.67828 15.4498C3.2258 14.3577 2.99291 13.1871 2.99291 12.005C2.99291 10.8229 3.2258 9.65229 3.67828 8.56017C4.13075 7.46805 4.79395 6.47577 5.62999 5.64H5.63999ZM16.95 7.05L15.54 8.46C16.4773 9.39764 17.0039 10.6692 17.0039 11.995C17.0039 13.3208 16.4773 14.5924 15.54 15.53L16.95 16.94C17.6001 16.29 18.1158 15.5183 18.4676 14.6689C18.8194 13.8196 19.0005 12.9093 19.0005 11.99C19.0005 11.0707 18.8194 10.1604 18.4676 9.31105C18.1158 8.46173 17.6001 7.69002 16.95 7.04V7.05ZM7.04999 7.05C6.3999 7.70002 5.88422 8.47172 5.5324 9.32105C5.18057 10.1704 4.99948 11.0807 4.99948 12C4.99948 12.9193 5.18057 13.8296 5.5324 14.6789C5.88422 15.5283 6.3999 16.3 7.04999 16.95L8.45999 15.54C7.52263 14.6024 6.99606 13.3308 6.99606 12.005C6.99606 10.6792 7.52263 9.40764 8.45999 8.47L7.04999 7.05Z" fill="#606060"/>
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 9C12.5933 9 13.1734 9.17595 13.6667 9.50559C14.1601 9.83524 14.5446 10.3038 14.7716 10.8519C14.9987 11.4001 15.0581 12.0033 14.9424 12.5853C14.8266 13.1672 14.5409 13.7018 14.1213 14.1213C13.7018 14.5409 13.1672 14.8266 12.5853 14.9424C12.0033 15.0581 11.4001 14.9987 10.8519 14.7716C10.3038 14.5446 9.83524 14.1601 9.50559 13.6667C9.17595 13.1734 9 12.5933 9 12C9 11.2044 9.31607 10.4413 9.87868 9.87868C10.4413 9.31607 11.2044 9 12 9" fill="#FF0000"/>
+                            <path d="M23 12C23.0005 13.4447 22.7163 14.8754 22.1639 16.2103C21.6114 17.5452 20.8013 18.7582 19.78 19.78L18.37 18.37C19.206 17.5342 19.8692 16.542 20.3217 15.4498C20.7742 14.3577 21.0071 13.1871 21.0071 12.005C21.0071 10.8229 20.7742 9.65229 20.3217 8.56017C19.8692 7.46805 19.206 6.47577 18.37 5.64L19.78 4.23C21.8402 6.2912 22.9983 9.08571 23 12ZM5.63999 5.64L4.21999 4.22C3.198 5.24151 2.38728 6.45437 1.83416 7.78929C1.28103 9.12421 0.996338 10.555 0.996338 12C0.996338 13.445 1.28103 14.8758 1.83416 16.2107C2.38728 17.5456 3.198 18.7585 4.21999 19.78L5.62999 18.37C4.79395 17.5342 4.13075 16.542 3.67828 15.4498C3.2258 14.3577 2.99291 13.1871 2.99291 12.005C2.99291 10.8229 3.2258 9.65229 3.67828 8.56017C4.13075 7.46805 4.79395 6.47577 5.62999 5.64H5.63999ZM16.95 7.05L15.54 8.46C16.4773 9.39764 17.0039 10.6692 17.0039 11.995C17.0039 13.3208 16.4773 14.5924 15.54 15.53L16.95 16.94C17.6001 16.29 18.1158 15.5183 18.4676 14.6689C18.8194 13.8196 19.0005 12.9093 19.0005 11.99C19.0005 11.0707 18.8194 10.1604 18.4676 9.31105C18.1158 8.46173 17.6001 7.69002 16.95 7.04V7.05ZM7.04999 7.05C6.3999 7.70002 5.88422 8.47172 5.5324 9.32105C5.18057 10.1704 4.99948 11.0807 4.99948 12C4.99948 12.9193 5.18057 13.8296 5.5324 14.6789C5.88422 15.5283 6.3999 16.3 7.04999 16.95L8.45999 15.54C7.52263 14.6024 6.99606 13.3308 6.99606 12.005C6.99606 10.6792 7.52263 9.40764 8.45999 8.47L7.04999 7.05Z" fill="#606060"/>
+                            <path d="M12 9C12.5933 9 13.1734 9.17595 13.6667 9.50559C14.1601 9.83524 14.5446 10.3038 14.7716 10.8519C14.9987 11.4001 15.0581 12.0033 14.9424 12.5853C14.8266 13.1672 14.5409 13.7018 14.1213 14.1213C13.7018 14.5409 13.1672 14.8266 12.5853 14.9424C12.0033 15.0581 11.4001 14.9987 10.8519 14.7716C10.3038 14.5446 9.83524 14.1601 9.50559 13.6667C9.17595 13.1734 9 12.5933 9 12C9 11.2044 9.31607 10.4413 9.87868 9.87868C10.4413 9.31607 11.2044 9 12 9" fill="#FF0000"/>
                         </svg>
                         <p>실시간 스트리밍 시작</p>
                     </a>
                 </div>
             </div>
 
-            <div class="drop apps">
+            <div class="drop tooltip apps">
                 <div class="button flex f-center circle">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M4 8H8V4H4V8ZM10 20H14V16H10V20ZM4 20H8V16H4V20ZM4 14H8V10H4V14ZM10 14H14V10H10V14ZM16 4V8H20V4H16ZM10 8H14V4H10V8ZM16 14H20V10H16V14ZM16 20H20V16H16V20Z" fill="#606060"/>
                     </svg>
+                </div>
+                <div class="tooltip-box d-hidden">
+                    <p>YouTube 앱</p>
                 </div>
                 <div class="drop-box d-hidden">
                     <a class="tab flex f-center">
@@ -127,11 +138,14 @@
                 </div>
             </div>
 
-            <div class="drop notification">
+            <div class="drop tooltip notification">
                 <div class="button flex f-center circle">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M12 22C13.1 22 14 21.1 14 20H10C10 21.1 10.9 22 12 22ZM18 16V11C18 7.93 16.36 5.36 13.5 4.68V4C13.5 3.17 12.83 2.5 12 2.5C11.17 2.5 10.5 3.17 10.5 4V4.68C7.63 5.36 6 7.92 6 11V16L4 18V19H20V18L18 16Z" fill="#606060"/>
                     </svg>
+                </div>
+                <div class="tooltip-box d-hidden">
+                    <p>알림</p>
                 </div>
                 <div class="drop-box d-hidden">
                     <div class="drop-title flex">
@@ -153,7 +167,7 @@
                             <div class="thumbnail">
                                 <img src="./imgs/thumbnail/thumbnail_9.jpg" alt="IZ*ONE (아이즈원) 'Panorama' MV" width="86">
                             </div>
-                            <div class="more-dots button o-hidden">
+                            <div class="more-dots button o-hidden circle">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M12 8C13.1 8 14 7.1 14 6C14 4.9 13.1 4 12 4C10.9 4 10 4.9 10 6C10 7.1 10.9 8 12 8ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10ZM12 16C10.9 16 10 16.9 10 18C10 19.1 10.9 20 12 20C13.1 20 14 19.1 14 18C14 16.9 13.1 16 12 16Z" class="icon-gray"/>
                                 </svg> 
@@ -288,7 +302,7 @@
         </div>
     </header>
 
-    <nav>
+    <nav class="long-nav">
         <div class="tabs">
             <a class="tab flex f-center selected">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -401,7 +415,7 @@
             </a>
             <a class="tab flex f-center">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M22 13V8L17 5L12 8L7 5L2 8V13L12 19L22 13ZM9 11H7V13H6V11H4V10H6V8H7V10H9V11ZM15 13C14.45 13 14 12.55 14 12C14 11.45 14.45 11 15 11C15.55 11 16 11.45 16 12C16 12.55 15.55 13 15 13ZM18 11C17.45 11 17 10.55 17 10C17 9.45 17.45 9 18 9C18.55 9 19 9.45 19 10C19 10.55 18.55 11 18 11Z" fill="#606060"/>
+                    <path d="M22 13V8L17 5L12 8L7 5L2 8V13L12 19L22 13ZM9 11H7V13H6V11H4V10H6V8H7V10H9V11ZM15 13C14.45 13 14 12.55 14 12C14 11.45 14.45 11 15 11C15.55 11 16 11.45 16 12C16 12.55 15.55 13 15 13ZM18 11C17.45 11 17 10.55 17 10C17 9.45 17.45 9 18 9C18.55 9 19 9.45 19 10C19 10.55 18.55 11 18 11Z" fill="#606060"/>
                 </svg>                                
                 <p>게임</p>
             </a>
@@ -476,806 +490,116 @@
 
     </nav>
 
-    <main class="flex f-center">
-        <div class="items flex">
-            <a class="item">
-                <div class="thumbnail">
-                    <img src="./imgs/thumbnail/thumbnail_1.jpg" alt="[Full Cam] 아이즈원 (IZ*ONE) - Panorama (4K) | IZ*ONE One-reeler Premiere" width="360">
-                    <div class="mouseover d-hidden">
-                        <div class="box flex f-center">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 3.67C7.41998 3.67 3.66998 7.42 3.66998 12C3.66998 16.58 7.41998 20.33 12 20.33C16.58 20.33 20.33 16.58 20.33 12C20.33 7.42 16.58 3.67 12 3.67ZM15.5 15.5L11.17 12.83V7.83H12.42V12.17L16.17 14.42L15.5 15.5V15.5Z" fill="white"/>
-                            </svg>
-                            <div class="box-more flex f-center">
-                                <p>나중에 볼 동영상</p>
-                            </div>
-                        </div>
-                        <div class="box flex f-center">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M9 10H18V12H9V10ZM6 6H18V8H6V6ZM12 14H18V16H12V14ZM6 12V18L10 15L6 12Z" fill="white"/>
-                            </svg>
-                            <div class="box-more flex f-center">
-                                <p>목록에 추가</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="info flex">
-                    <div>
-                        <img src="./imgs/channel/M2.jpg" alt="M2" width="36">
-                    </div>
-                    <div class="detail">
-                        <div class="item-title">
-                            <p>[Full Cam] 아이즈원 (IZ*ONE) - Panorama (4K) | IZ*ONE One-reeler Premiere</p>
-                        </div>
-                        <div class="item-info">
-                            <div class="channel flex">
-                                <p>M2</p>
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM9.92 17.93L4.97 12.98L7.02 10.93L9.92 13.83L17.27 6.48L19.32 8.53L9.92 17.93Z" fill="#606060"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <p>조회수 17만회 • 2일 전</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="drop">
-                        <div class="more-dots button o-hidden">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 8C13.1 8 14 7.1 14 6C14 4.9 13.1 4 12 4C10.9 4 10 4.9 10 6C10 7.1 10.9 8 12 8ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10ZM12 16C10.9 16 10 16.9 10 18C10 19.1 10.9 20 12 20C13.1 20 14 19.1 14 18C14 16.9 13.1 16 12 16Z" class="icon-gray"/>
-                            </svg>
-                        </div>
-                        <div class="drop-box d-hidden">
-                            <div class="tab flex f-center">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9,10 L18,10 L18,12 L9,12 L9,10 Z M6,6 L18,6 L18,8 L6,8 L6,6 Z M12,14 L18,14 L18,16 L12,16 L12,14 Z M6,12 L6,18 L10,15 L6,12 Z" fill="#909090"/>
-                                </svg>
-                                <p>목록에 추가</p>
-                            </div>
-                            <div class="tab flex f-center">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 3.67c-4.58 0-8.33 3.75-8.33 8.33s3.75 8.33 8.33 8.33 8.33-3.75 8.33-8.33S16.58 3.67 12 3.67zm3.5 11.83l-4.33-2.67v-5h1.25v4.34l3.75 2.25-.67 1.08z" fill="#909090"/>
-                                </svg>
-                                <p>나중에 볼 동영상에 저장</p>
-                            </div>
-                            <div class="tab flex f-center">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M14 10H2v2h12v-2zm0-4H2v2h12V6zm4 8v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM2 16h8v-2H2v2z" fill="#909090"/>
-                                </svg>                                 
-                                <p>재생목록에 저장</p>
-                            </div>
-                            <div class="top-border">
-                                <div class="tab flex f-center">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8 0-1.85.63-3.55 1.69-4.9L16.9 18.31C15.55 19.37 13.85 20 12 20zm6.31-3.1L7.1 5.69C8.45 4.63 10.15 4 12 4c4.42 0 8 3.58 8 8 0 1.85-.63 3.55-1.69 4.9z" fill="#909090"/>
-                                    </svg>
-                                    <p>관심 없음</p>
-                                </div>
-                                <div class="tab flex f-center">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M7 11v2h10v-2H7zm5-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" fill="#909090"/>
-                                    </svg>                                   
-                                    <p>채널 추천 안함</p>
-                                </div>
-                                <div class="tab flex f-center">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M14.4 6L14 4H5v17h2v-7h5.6l.4 2h7V6z" fill="#909090"/>
-                                    </svg>
-                                    <p>신고</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <nav class="short-nav d-hidden">
+        <div class="short-tabs">
+            <a class="short-tab flex f-center selected">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 20V14H14V20H19V12H22L12 3L2 12H5V20" fill="#FF0000"/>
+                </svg>
+                <p>홈</p>
             </a>
-            
-            <a class="item">
-                <div class="thumbnail">
-                    <img src="./imgs/thumbnail/thumbnail_2.jpg" alt="IZ*ONE (아이즈원) - 'Beware' MV" width="360">
-                    <div class="mouseover d-hidden">
-                        <div class="box flex f-center">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 3.67C7.41998 3.67 3.66998 7.42 3.66998 12C3.66998 16.58 7.41998 20.33 12 20.33C16.58 20.33 20.33 16.58 20.33 12C20.33 7.42 16.58 3.67 12 3.67ZM15.5 15.5L11.17 12.83V7.83H12.42V12.17L16.17 14.42L15.5 15.5V15.5Z" fill="white"/>
-                            </svg>
-                            <div class="box-more flex f-center">
-                                <p>나중에 볼 동영상</p>
-                            </div>
-                        </div>
-                        <div class="box flex f-center">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M9 10H18V12H9V10ZM6 6H18V8H6V6ZM12 14H18V16H12V14ZM6 12V18L10 15L6 12Z" fill="white"/>
-                            </svg>
-                            <div class="box-more flex f-center">
-                                <p>목록에 추가</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="info flex">
-                    <div>
-                        <img src="./imgs/channel/IZ_ONE.jpg" alt="official IZ*ONE" width="36">
-                    </div>
-                    <div class="detail">
-                        <div class="item-title">
-                            <p>IZ*ONE (아이즈원) - 'Beware' MV</p>
-                        </div>
-                        <div class="item-info">
-                            <div class="channel flex">
-                                <p>official IZ*ONE</p>
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 3V13.55C11.41 13.21 10.73 13 10 13C7.79 13 6 14.79 6 17C6 19.21 7.79 21 10 21C12.21 21 14 19.21 14 17V7H18V3H12Z" fill="#606060"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <p>조회수 869만회 • 2개월 전</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="drop">
-                        <div class="more-dots button o-hidden">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 8C13.1 8 14 7.1 14 6C14 4.9 13.1 4 12 4C10.9 4 10 4.9 10 6C10 7.1 10.9 8 12 8ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10ZM12 16C10.9 16 10 16.9 10 18C10 19.1 10.9 20 12 20C13.1 20 14 19.1 14 18C14 16.9 13.1 16 12 16Z" class="icon-gray"/>
-                            </svg>
-                        </div>
-                        <div class="drop-box d-hidden">
-                            <div class="tab flex f-center">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9,10 L18,10 L18,12 L9,12 L9,10 Z M6,6 L18,6 L18,8 L6,8 L6,6 Z M12,14 L18,14 L18,16 L12,16 L12,14 Z M6,12 L6,18 L10,15 L6,12 Z" fill="#909090"/>
-                                </svg>
-                                <p>목록에 추가</p>
-                            </div>
-                            <div class="tab flex f-center">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 3.67c-4.58 0-8.33 3.75-8.33 8.33s3.75 8.33 8.33 8.33 8.33-3.75 8.33-8.33S16.58 3.67 12 3.67zm3.5 11.83l-4.33-2.67v-5h1.25v4.34l3.75 2.25-.67 1.08z" fill="#909090"/>
-                                </svg>
-                                <p>나중에 볼 동영상에 저장</p>
-                            </div>
-                            <div class="tab flex f-center">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M14 10H2v2h12v-2zm0-4H2v2h12V6zm4 8v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM2 16h8v-2H2v2z" fill="#909090"/>
-                                </svg>                                 
-                                <p>재생목록에 저장</p>
-                            </div>
-                            <div class="top-border">
-                                <div class="tab flex f-center">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8 0-1.85.63-3.55 1.69-4.9L16.9 18.31C15.55 19.37 13.85 20 12 20zm6.31-3.1L7.1 5.69C8.45 4.63 10.15 4 12 4c4.42 0 8 3.58 8 8 0 1.85-.63 3.55-1.69 4.9z" fill="#909090"/>
-                                    </svg>
-                                    <p>관심 없음</p>
-                                </div>
-                                <div class="tab flex f-center">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M7 11v2h10v-2H7zm5-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" fill="#909090"/>
-                                    </svg>                                   
-                                    <p>채널 추천 안함</p>
-                                </div>
-                                <div class="tab flex f-center">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M14.4 6L14 4H5v17h2v-7h5.6l.4 2h7V6z" fill="#909090"/>
-                                    </svg>
-                                    <p>신고</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <a class="short-tab flex f-center">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.53 11.2C17.3 10.9 17.03 10.64 16.77 10.38C16.12 9.78 15.37 9.35 14.74 8.72C13.28 7.26 12.96 4.85 13.89 3C12.99 3.23 12.14 3.75 11.44 4.32C8.9 6.4 7.9 10.07 9.1 13.22C9.14 13.32 9.18 13.42 9.18 13.55C9.18 13.77 9.03 13.97 8.83 14.05C8.61 14.15 8.37 14.09 8.19 13.93C8.13 13.88 8.09 13.83 8.04 13.76C6.94 12.33 6.76 10.28 7.51 8.64C5.87 10 5 12.3 5.12 14.47C5.16 14.97 5.22 15.47 5.39 15.97C5.53 16.57 5.79 17.17 6.11 17.7C7.15 19.43 8.98 20.67 10.95 20.92C13.05 21.19 15.3 20.8 16.91 19.32C18.71 17.66 19.36 15.02 18.41 12.72L18.28 12.46C18.08 12.01 17.81 11.59 17.5 11.21L17.53 11.2ZM14.43 17.5C14.15 17.74 13.7 18 13.35 18.1C12.25 18.48 11.15 17.94 10.47 17.28C11.67 17 12.37 16.12 12.57 15.23C12.74 14.43 12.43 13.77 12.3 13C12.18 12.26 12.2 11.63 12.5 10.94C12.65 11.32 12.85 11.7 13.08 12C13.84 13 15.03 13.44 15.28 14.8C15.32 14.94 15.34 15.08 15.34 15.23C15.37 16.05 15.02 16.95 14.42 17.49L14.43 17.5Z" fill="#606060"/>
+                </svg>                
+                <p>인기</p>
             </a>
-
-            <a class="item">
-                <div class="thumbnail">
-                    <img src="./imgs/thumbnail/thumbnail_3.jpg" alt="IZ*ONE (아이즈원) - 'Panorama' 응원법" width="360">
-                    <div class="mouseover d-hidden">
-                        <div class="box flex f-center">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 3.67C7.41998 3.67 3.66998 7.42 3.66998 12C3.66998 16.58 7.41998 20.33 12 20.33C16.58 20.33 20.33 16.58 20.33 12C20.33 7.42 16.58 3.67 12 3.67ZM15.5 15.5L11.17 12.83V7.83H12.42V12.17L16.17 14.42L15.5 15.5V15.5Z" fill="white"/>
-                            </svg>
-                            <div class="box-more flex f-center">
-                                <p>나중에 볼 동영상</p>
-                            </div>
-                        </div>
-                        <div class="box flex f-center">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M9 10H18V12H9V10ZM6 6H18V8H6V6ZM12 14H18V16H12V14ZM6 12V18L10 15L6 12Z" fill="white"/>
-                            </svg>
-                            <div class="box-more flex f-center">
-                                <p>목록에 추가</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="info flex">
-                    <div>
-                        <img src="./imgs/channel/IZ_ONE.jpg" alt="official IZ*ONE" width="36">
-                    </div>
-                    <div class="detail">
-                        <div class="item-title">
-                            <p>IZ*ONE (아이즈원) - 'Panorama' 응원법</p>
-                        </div>
-                        <div class="item-info">
-                            <div class="channel flex">
-                                <p>official IZ*ONE</p>
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 3V13.55C11.41 13.21 10.73 13 10 13C7.79 13 6 14.79 6 17C6 19.21 7.79 21 10 21C12.21 21 14 19.21 14 17V7H18V3H12Z" fill="#606060"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <p>조회수 23만회 • 3일 전</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="drop">
-                        <div class="more-dots button o-hidden">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 8C13.1 8 14 7.1 14 6C14 4.9 13.1 4 12 4C10.9 4 10 4.9 10 6C10 7.1 10.9 8 12 8ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10ZM12 16C10.9 16 10 16.9 10 18C10 19.1 10.9 20 12 20C13.1 20 14 19.1 14 18C14 16.9 13.1 16 12 16Z" class="icon-gray"/>
-                            </svg>
-                        </div>
-                        <div class="drop-box d-hidden">
-                            <div class="tab flex f-center">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9,10 L18,10 L18,12 L9,12 L9,10 Z M6,6 L18,6 L18,8 L6,8 L6,6 Z M12,14 L18,14 L18,16 L12,16 L12,14 Z M6,12 L6,18 L10,15 L6,12 Z" fill="#909090"/>
-                                </svg>
-                                <p>목록에 추가</p>
-                            </div>
-                            <div class="tab flex f-center">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 3.67c-4.58 0-8.33 3.75-8.33 8.33s3.75 8.33 8.33 8.33 8.33-3.75 8.33-8.33S16.58 3.67 12 3.67zm3.5 11.83l-4.33-2.67v-5h1.25v4.34l3.75 2.25-.67 1.08z" fill="#909090"/>
-                                </svg>
-                                <p>나중에 볼 동영상에 저장</p>
-                            </div>
-                            <div class="tab flex f-center">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M14 10H2v2h12v-2zm0-4H2v2h12V6zm4 8v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM2 16h8v-2H2v2z" fill="#909090"/>
-                                </svg>                                 
-                                <p>재생목록에 저장</p>
-                            </div>
-                            <div class="top-border">
-                                <div class="tab flex f-center">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8 0-1.85.63-3.55 1.69-4.9L16.9 18.31C15.55 19.37 13.85 20 12 20zm6.31-3.1L7.1 5.69C8.45 4.63 10.15 4 12 4c4.42 0 8 3.58 8 8 0 1.85-.63 3.55-1.69 4.9z" fill="#909090"/>
-                                    </svg>
-                                    <p>관심 없음</p>
-                                </div>
-                                <div class="tab flex f-center">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M7 11v2h10v-2H7zm5-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" fill="#909090"/>
-                                    </svg>                                   
-                                    <p>채널 추천 안함</p>
-                                </div>
-                                <div class="tab flex f-center">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M14.4 6L14 4H5v17h2v-7h5.6l.4 2h7V6z" fill="#909090"/>
-                                    </svg>
-                                    <p>신고</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <a class="short-tab flex f-center">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18.7 8.7H5.30001V7H18.7V8.7ZM17 3.7H7.00001V5.3H17V3.7V3.7ZM20.3 12V18.7C20.3 19.7 19.6 20.3 18.7 20.3H5.30001C4.30001 20.3 3.70001 19.6 3.70001 18.7V12C3.70001 11 4.40001 10.3 5.30001 10.3H18.7C19.7 10.3 20.3 11.1 20.3 12ZM15.3 15.3L10.3 12.6V18L15.3 15.3Z" fill="#606060"/>
+                </svg>
+                <p>구독</p>
             </a>
-
-            <a class="item">
-                <div class="thumbnail">
-                    <img src="./imgs/thumbnail/thumbnail_4.jpg" alt="IZ*ONE (아이즈원) - 'Sequence' 응원법" width="360">
-                    <div class="mouseover d-hidden">
-                        <div class="box flex f-center">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 3.67C7.41998 3.67 3.66998 7.42 3.66998 12C3.66998 16.58 7.41998 20.33 12 20.33C16.58 20.33 20.33 16.58 20.33 12C20.33 7.42 16.58 3.67 12 3.67ZM15.5 15.5L11.17 12.83V7.83H12.42V12.17L16.17 14.42L15.5 15.5V15.5Z" fill="white"/>
-                            </svg>
-                            <div class="box-more flex f-center">
-                                <p>나중에 볼 동영상</p>
-                            </div>
-                        </div>
-                        <div class="box flex f-center">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M9 10H18V12H9V10ZM6 6H18V8H6V6ZM12 14H18V16H12V14ZM6 12V18L10 15L6 12Z" fill="white"/>
-                            </svg>
-                            <div class="box-more flex f-center">
-                                <p>목록에 추가</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="info flex">
-                    <div>
-                        <img src="./imgs/channel/IZ_ONE.jpg" alt="official IZ*ONE" width="36">
-                    </div>
-                    <div class="detail">
-                        <div class="item-title">
-                            <p>IZ*ONE (아이즈원) - 'Sequence' 응원법</p>
-                        </div>
-                        <div class="item-info">
-                            <div class="channel flex">
-                                <p>official IZ*ONE</p>
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 3V13.55C11.41 13.21 10.73 13 10 13C7.79 13 6 14.79 6 17C6 19.21 7.79 21 10 21C12.21 21 14 19.21 14 17V7H18V3H12Z" fill="#606060"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <p>조회수 11만회 • 3일 전</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="drop">
-                        <div class="more-dots button o-hidden">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 8C13.1 8 14 7.1 14 6C14 4.9 13.1 4 12 4C10.9 4 10 4.9 10 6C10 7.1 10.9 8 12 8ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10ZM12 16C10.9 16 10 16.9 10 18C10 19.1 10.9 20 12 20C13.1 20 14 19.1 14 18C14 16.9 13.1 16 12 16Z" class="icon-gray"/>
-                            </svg>
-                        </div>
-                        <div class="drop-box right-box d-hidden">
-                            <div class="tab flex f-center">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9,10 L18,10 L18,12 L9,12 L9,10 Z M6,6 L18,6 L18,8 L6,8 L6,6 Z M12,14 L18,14 L18,16 L12,16 L12,14 Z M6,12 L6,18 L10,15 L6,12 Z" fill="#909090"/>
-                                </svg>
-                                <p>목록에 추가</p>
-                            </div>
-                            <div class="tab flex f-center">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 3.67c-4.58 0-8.33 3.75-8.33 8.33s3.75 8.33 8.33 8.33 8.33-3.75 8.33-8.33S16.58 3.67 12 3.67zm3.5 11.83l-4.33-2.67v-5h1.25v4.34l3.75 2.25-.67 1.08z" fill="#909090"/>
-                                </svg>
-                                <p>나중에 볼 동영상에 저장</p>
-                            </div>
-                            <div class="tab flex f-center">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M14 10H2v2h12v-2zm0-4H2v2h12V6zm4 8v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM2 16h8v-2H2v2z" fill="#909090"/>
-                                </svg>                                 
-                                <p>재생목록에 저장</p>
-                            </div>
-                            <div class="top-border">
-                                <div class="tab flex f-center">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8 0-1.85.63-3.55 1.69-4.9L16.9 18.31C15.55 19.37 13.85 20 12 20zm6.31-3.1L7.1 5.69C8.45 4.63 10.15 4 12 4c4.42 0 8 3.58 8 8 0 1.85-.63 3.55-1.69 4.9z" fill="#909090"/>
-                                    </svg>
-                                    <p>관심 없음</p>
-                                </div>
-                                <div class="tab flex f-center">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M7 11v2h10v-2H7zm5-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" fill="#909090"/>
-                                    </svg>                                   
-                                    <p>채널 추천 안함</p>
-                                </div>
-                                <div class="tab flex f-center">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M14.4 6L14 4H5v17h2v-7h5.6l.4 2h7V6z" fill="#909090"/>
-                                    </svg>
-                                    <p>신고</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <a class="short-tab flex f-center">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 6H2V20C2 21.1 2.9 22 4 22H18V20H4V6ZM20 2H8C6.9 2 6 2.9 6 4V16C6 17.1 6.9 18 8 18H20C21.1 18 22 17.1 22 16V4C22 2.9 21.1 2 20 2ZM12 14.5V5.5L18 10L12 14.5Z" fill="#606060"/>
+                </svg>                    
+                <p>보관함</p>
             </a>
-
-            <a class="item">
-                <div class="thumbnail">
-                    <img src="./imgs/thumbnail/thumbnail_5.jpg" alt="IZ*ONE 아케이드Ⅱ (ARCADE Ⅱ) Special EP_Love Lane-마마무 (Cover by CHAEWON, Producer by MINJU of IZ*ONE)" width="360">
-                    <div class="mouseover d-hidden">
-                        <div class="box flex f-center">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 3.67C7.41998 3.67 3.66998 7.42 3.66998 12C3.66998 16.58 7.41998 20.33 12 20.33C16.58 20.33 20.33 16.58 20.33 12C20.33 7.42 16.58 3.67 12 3.67ZM15.5 15.5L11.17 12.83V7.83H12.42V12.17L16.17 14.42L15.5 15.5V15.5Z" fill="white"/>
-                            </svg>
-                            <div class="box-more flex f-center">
-                                <p>나중에 볼 동영상</p>
-                            </div>
-                        </div>
-                        <div class="box flex f-center">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M9 10H18V12H9V10ZM6 6H18V8H6V6ZM12 14H18V16H12V14ZM6 12V18L10 15L6 12Z" fill="white"/>
-                            </svg>
-                            <div class="box-more flex f-center">
-                                <p>목록에 추가</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="info flex">
-                    <div>
-                        <img src="./imgs/channel/IZ_ONE.jpg" alt="official IZ*ONE" width="36">
-                    </div>
-                    <div class="detail">
-                        <div class="item-title">
-                            <p>IZ*ONE 아케이드Ⅱ (ARCADE Ⅱ) Special EP_Love Lane-마마무 (Cover by CHAEWON, Producer by MINJU of IZ*ONE)</p>
-                        </div>
-                        <div class="item-info">
-                            <div class="channel flex">
-                                <p>official IZ*ONE</p>
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 3V13.55C11.41 13.21 10.73 13 10 13C7.79 13 6 14.79 6 17C6 19.21 7.79 21 10 21C12.21 21 14 19.21 14 17V7H18V3H12Z" fill="#606060"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <p>조회수 56만회 • 1개월 전</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="drop">
-                        <div class="more-dots button o-hidden">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 8C13.1 8 14 7.1 14 6C14 4.9 13.1 4 12 4C10.9 4 10 4.9 10 6C10 7.1 10.9 8 12 8ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10ZM12 16C10.9 16 10 16.9 10 18C10 19.1 10.9 20 12 20C13.1 20 14 19.1 14 18C14 16.9 13.1 16 12 16Z" class="icon-gray"/>
-                            </svg>
-                        </div>
-                        <div class="drop-box d-hidden">
-                            <div class="tab flex f-center">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9,10 L18,10 L18,12 L9,12 L9,10 Z M6,6 L18,6 L18,8 L6,8 L6,6 Z M12,14 L18,14 L18,16 L12,16 L12,14 Z M6,12 L6,18 L10,15 L6,12 Z" fill="#909090"/>
-                                </svg>
-                                <p>목록에 추가</p>
-                            </div>
-                            <div class="tab flex f-center">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 3.67c-4.58 0-8.33 3.75-8.33 8.33s3.75 8.33 8.33 8.33 8.33-3.75 8.33-8.33S16.58 3.67 12 3.67zm3.5 11.83l-4.33-2.67v-5h1.25v4.34l3.75 2.25-.67 1.08z" fill="#909090"/>
-                                </svg>
-                                <p>나중에 볼 동영상에 저장</p>
-                            </div>
-                            <div class="tab flex f-center">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M14 10H2v2h12v-2zm0-4H2v2h12V6zm4 8v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM2 16h8v-2H2v2z" fill="#909090"/>
-                                </svg>                                 
-                                <p>재생목록에 저장</p>
-                            </div>
-                            <div class="top-border">
-                                <div class="tab flex f-center">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8 0-1.85.63-3.55 1.69-4.9L16.9 18.31C15.55 19.37 13.85 20 12 20zm6.31-3.1L7.1 5.69C8.45 4.63 10.15 4 12 4c4.42 0 8 3.58 8 8 0 1.85-.63 3.55-1.69 4.9z" fill="#909090"/>
-                                    </svg>
-                                    <p>관심 없음</p>
-                                </div>
-                                <div class="tab flex f-center">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M7 11v2h10v-2H7zm5-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" fill="#909090"/>
-                                    </svg>                                   
-                                    <p>채널 추천 안함</p>
-                                </div>
-                                <div class="tab flex f-center">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M14.4 6L14 4H5v17h2v-7h5.6l.4 2h7V6z" fill="#909090"/>
-                                    </svg>
-                                    <p>신고</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </a>
-
-            <a class="item">
-                <div class="thumbnail">
-                    <img src="./imgs/thumbnail/thumbnail_6.jpg" alt="IZ*ONE 아케이드Ⅱ (ARCADE Ⅱ) Special EP_ With*One Self M/V" width="360">
-                    <div class="mouseover d-hidden">
-                        <div class="box flex f-center">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 3.67C7.41998 3.67 3.66998 7.42 3.66998 12C3.66998 16.58 7.41998 20.33 12 20.33C16.58 20.33 20.33 16.58 20.33 12C20.33 7.42 16.58 3.67 12 3.67ZM15.5 15.5L11.17 12.83V7.83H12.42V12.17L16.17 14.42L15.5 15.5V15.5Z" fill="white"/>
-                            </svg>
-                            <div class="box-more flex f-center">
-                                <p>나중에 볼 동영상</p>
-                            </div>
-                        </div>
-                        <div class="box flex f-center">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M9 10H18V12H9V10ZM6 6H18V8H6V6ZM12 14H18V16H12V14ZM6 12V18L10 15L6 12Z" fill="white"/>
-                            </svg>
-                            <div class="box-more flex f-center">
-                                <p>목록에 추가</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="info flex">
-                    <div>
-                        <img src="./imgs/channel/IZ_ONE.jpg" alt="official IZ*ONE" width="36">
-                    </div>
-                    <div class="detail">
-                        <div class="item-title">
-                            <p>IZ*ONE 아케이드Ⅱ (ARCADE Ⅱ) Special EP_ With*One Self M/V</p>
-                        </div>
-                        <div class="item-info">
-                            <div class="channel flex">
-                                <p>official IZ*ONE</p>
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 3V13.55C11.41 13.21 10.73 13 10 13C7.79 13 6 14.79 6 17C6 19.21 7.79 21 10 21C12.21 21 14 19.21 14 17V7H18V3H12Z" fill="#606060"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <p>조회수 40만회 • 1개월 전</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="drop">
-                        <div class="more-dots button o-hidden">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 8C13.1 8 14 7.1 14 6C14 4.9 13.1 4 12 4C10.9 4 10 4.9 10 6C10 7.1 10.9 8 12 8ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10ZM12 16C10.9 16 10 16.9 10 18C10 19.1 10.9 20 12 20C13.1 20 14 19.1 14 18C14 16.9 13.1 16 12 16Z" class="icon-gray"/>
-                            </svg>
-                        </div>
-                        <div class="drop-box d-hidden">
-                            <div class="tab flex f-center">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9,10 L18,10 L18,12 L9,12 L9,10 Z M6,6 L18,6 L18,8 L6,8 L6,6 Z M12,14 L18,14 L18,16 L12,16 L12,14 Z M6,12 L6,18 L10,15 L6,12 Z" fill="#909090"/>
-                                </svg>
-                                <p>목록에 추가</p>
-                            </div>
-                            <div class="tab flex f-center">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 3.67c-4.58 0-8.33 3.75-8.33 8.33s3.75 8.33 8.33 8.33 8.33-3.75 8.33-8.33S16.58 3.67 12 3.67zm3.5 11.83l-4.33-2.67v-5h1.25v4.34l3.75 2.25-.67 1.08z" fill="#909090"/>
-                                </svg>
-                                <p>나중에 볼 동영상에 저장</p>
-                            </div>
-                            <div class="tab flex f-center">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M14 10H2v2h12v-2zm0-4H2v2h12V6zm4 8v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM2 16h8v-2H2v2z" fill="#909090"/>
-                                </svg>                                 
-                                <p>재생목록에 저장</p>
-                            </div>
-                            <div class="top-border">
-                                <div class="tab flex f-center">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8 0-1.85.63-3.55 1.69-4.9L16.9 18.31C15.55 19.37 13.85 20 12 20zm6.31-3.1L7.1 5.69C8.45 4.63 10.15 4 12 4c4.42 0 8 3.58 8 8 0 1.85-.63 3.55-1.69 4.9z" fill="#909090"/>
-                                    </svg>
-                                    <p>관심 없음</p>
-                                </div>
-                                <div class="tab flex f-center">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M7 11v2h10v-2H7zm5-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" fill="#909090"/>
-                                    </svg>                                   
-                                    <p>채널 추천 안함</p>
-                                </div>
-                                <div class="tab flex f-center">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M14.4 6L14 4H5v17h2v-7h5.6l.4 2h7V6z" fill="#909090"/>
-                                    </svg>
-                                    <p>신고</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </a>
-
-            <a class="item">
-                <div class="thumbnail">
-                    <img src="./imgs/thumbnail/thumbnail_7.jpg" alt="IZ*ONE 에너지 캠(ENOZI Cam) EP.71" width="360">
-                    <div class="mouseover d-hidden">
-                        <div class="box flex f-center">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 3.67C7.41998 3.67 3.66998 7.42 3.66998 12C3.66998 16.58 7.41998 20.33 12 20.33C16.58 20.33 20.33 16.58 20.33 12C20.33 7.42 16.58 3.67 12 3.67ZM15.5 15.5L11.17 12.83V7.83H12.42V12.17L16.17 14.42L15.5 15.5V15.5Z" fill="white"/>
-                            </svg>
-                            <div class="box-more flex f-center">
-                                <p>나중에 볼 동영상</p>
-                            </div>
-                        </div>
-                        <div class="box flex f-center">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M9 10H18V12H9V10ZM6 6H18V8H6V6ZM12 14H18V16H12V14ZM6 12V18L10 15L6 12Z" fill="white"/>
-                            </svg>
-                            <div class="box-more flex f-center">
-                                <p>목록에 추가</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="info flex">
-                    <div>
-                        <img src="./imgs/channel/IZ_ONE.jpg" alt="official IZ*ONE" width="36">
-                    </div>
-                    <div class="detail">
-                        <div class="item-title">
-                            <p>IZ*ONE 에너지 캠(ENOZI Cam) EP.71</p>
-                        </div>
-                        <div class="item-info">
-                            <div class="channel flex">
-                                <p>official IZ*ONE</p>
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 3V13.55C11.41 13.21 10.73 13 10 13C7.79 13 6 14.79 6 17C6 19.21 7.79 21 10 21C12.21 21 14 19.21 14 17V7H18V3H12Z" fill="#606060"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <p>조회수 36만회 • 2개월 전</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="drop">
-                        <div class="more-dots button o-hidden">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 8C13.1 8 14 7.1 14 6C14 4.9 13.1 4 12 4C10.9 4 10 4.9 10 6C10 7.1 10.9 8 12 8ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10ZM12 16C10.9 16 10 16.9 10 18C10 19.1 10.9 20 12 20C13.1 20 14 19.1 14 18C14 16.9 13.1 16 12 16Z" class="icon-gray"/>
-                            </svg>
-                        </div>
-                        <div class="drop-box d-hidden">
-                            <div class="tab flex f-center">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9,10 L18,10 L18,12 L9,12 L9,10 Z M6,6 L18,6 L18,8 L6,8 L6,6 Z M12,14 L18,14 L18,16 L12,16 L12,14 Z M6,12 L6,18 L10,15 L6,12 Z" fill="#909090"/>
-                                </svg>
-                                <p>목록에 추가</p>
-                            </div>
-                            <div class="tab flex f-center">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 3.67c-4.58 0-8.33 3.75-8.33 8.33s3.75 8.33 8.33 8.33 8.33-3.75 8.33-8.33S16.58 3.67 12 3.67zm3.5 11.83l-4.33-2.67v-5h1.25v4.34l3.75 2.25-.67 1.08z" fill="#909090"/>
-                                </svg>
-                                <p>나중에 볼 동영상에 저장</p>
-                            </div>
-                            <div class="tab flex f-center">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M14 10H2v2h12v-2zm0-4H2v2h12V6zm4 8v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM2 16h8v-2H2v2z" fill="#909090"/>
-                                </svg>                                 
-                                <p>재생목록에 저장</p>
-                            </div>
-                            <div class="top-border">
-                                <div class="tab flex f-center">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8 0-1.85.63-3.55 1.69-4.9L16.9 18.31C15.55 19.37 13.85 20 12 20zm6.31-3.1L7.1 5.69C8.45 4.63 10.15 4 12 4c4.42 0 8 3.58 8 8 0 1.85-.63 3.55-1.69 4.9z" fill="#909090"/>
-                                    </svg>
-                                    <p>관심 없음</p>
-                                </div>
-                                <div class="tab flex f-center">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M7 11v2h10v-2H7zm5-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" fill="#909090"/>
-                                    </svg>                                   
-                                    <p>채널 추천 안함</p>
-                                </div>
-                                <div class="tab flex f-center">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M14.4 6L14 4H5v17h2v-7h5.6l.4 2h7V6z" fill="#909090"/>
-                                    </svg>
-                                    <p>신고</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </a>
-
-            <a class="item">
-                <div class="thumbnail">
-                    <img src="./imgs/thumbnail/thumbnail_8.jpg" alt="우리 집 강아지 짱귀엽다." width="360">
-                    <div class="mouseover d-hidden">
-                        <div class="box flex f-center">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 3.67C7.41998 3.67 3.66998 7.42 3.66998 12C3.66998 16.58 7.41998 20.33 12 20.33C16.58 20.33 20.33 16.58 20.33 12C20.33 7.42 16.58 3.67 12 3.67ZM15.5 15.5L11.17 12.83V7.83H12.42V12.17L16.17 14.42L15.5 15.5V15.5Z" fill="white"/>
-                            </svg>
-                            <div class="box-more flex f-center">
-                                <p>나중에 볼 동영상</p>
-                            </div>
-                        </div>
-                        <div class="box flex f-center">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M9 10H18V12H9V10ZM6 6H18V8H6V6ZM12 14H18V16H12V14ZM6 12V18L10 15L6 12Z" fill="white"/>
-                            </svg>
-                            <div class="box-more flex f-center">
-                                <p>목록에 추가</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="info flex">
-                    <div>
-                        <img src="./imgs/channel/spuri.jpg" alt="spuri" width="36">
-                    </div>
-                    <div class="detail">
-                        <div class="item-title">
-                            <p>우리집 강아지 짱귀엽다.</p>
-                        </div>
-                        <div class="item-info">
-                            <div class="channel flex">
-                                <p>w00ss</p>
-
-                            </div>
-                            <div>
-                                <p>조회수 3회 • 1일 전</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="drop">
-                        <div class="more-dots button o-hidden">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 8C13.1 8 14 7.1 14 6C14 4.9 13.1 4 12 4C10.9 4 10 4.9 10 6C10 7.1 10.9 8 12 8ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10ZM12 16C10.9 16 10 16.9 10 18C10 19.1 10.9 20 12 20C13.1 20 14 19.1 14 18C14 16.9 13.1 16 12 16Z" class="icon-gray"/>
-                            </svg>
-                        </div>
-                        <div class="drop-box right-box d-hidden">
-                            <div class="tab flex f-center">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9,10 L18,10 L18,12 L9,12 L9,10 Z M6,6 L18,6 L18,8 L6,8 L6,6 Z M12,14 L18,14 L18,16 L12,16 L12,14 Z M6,12 L6,18 L10,15 L6,12 Z" fill="#909090"/>
-                                </svg>
-                                <p>목록에 추가</p>
-                            </div>
-                            <div class="tab flex f-center">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 3.67c-4.58 0-8.33 3.75-8.33 8.33s3.75 8.33 8.33 8.33 8.33-3.75 8.33-8.33S16.58 3.67 12 3.67zm3.5 11.83l-4.33-2.67v-5h1.25v4.34l3.75 2.25-.67 1.08z" fill="#909090"/>
-                                </svg>
-                                <p>나중에 볼 동영상에 저장</p>
-                            </div>
-                            <div class="tab flex f-center">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M14 10H2v2h12v-2zm0-4H2v2h12V6zm4 8v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM2 16h8v-2H2v2z" fill="#909090"/>
-                                </svg>                                 
-                                <p>재생목록에 저장</p>
-                            </div>
-                            <div class="top-border">
-                                <div class="tab flex f-center">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8 0-1.85.63-3.55 1.69-4.9L16.9 18.31C15.55 19.37 13.85 20 12 20zm6.31-3.1L7.1 5.69C8.45 4.63 10.15 4 12 4c4.42 0 8 3.58 8 8 0 1.85-.63 3.55-1.69 4.9z" fill="#909090"/>
-                                    </svg>
-                                    <p>관심 없음</p>
-                                </div>
-                                <div class="tab flex f-center">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M7 11v2h10v-2H7zm5-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" fill="#909090"/>
-                                    </svg>                                   
-                                    <p>채널 추천 안함</p>
-                                </div>
-                                <div class="tab flex f-center">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M14.4 6L14 4H5v17h2v-7h5.6l.4 2h7V6z" fill="#909090"/>
-                                    </svg>
-                                    <p>신고</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </a>
-
         </div>
+    </nav>
 
-        <div class="post-box flex">
-            <div class="post-title">
-                최신 YouTube 게시물
-            </div>
-            <div class="posts flex">
-                
-                <a class="post flex">
-                    <div class="info flex f-center">
-                        <img src="./imgs/channel/spuri.jpg" alt="spuri" width="24">
-                        <p class="channel flex">w00ss</p>
-                        <p>•</p>
-                        <p class="channel flex">6시간 전</p>
+    <main class="flex f-center">
+        <div class="main-container">
+            <div class="items flex">
+                <a class="item">
+                    <div class="thumbnail">
+                        <img src="./imgs/thumbnail/thumbnail_1.jpg" alt="[Full Cam] 아이즈원 (IZ*ONE) - Panorama (4K) | IZ*ONE One-reeler Premiere" class="thumbnail-img">
+                        <div class="mouseover d-hidden">
+                            <div class="box flex f-center">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 3.67C7.41998 3.67 3.66998 7.42 3.66998 12C3.66998 16.58 7.41998 20.33 12 20.33C16.58 20.33 20.33 16.58 20.33 12C20.33 7.42 16.58 3.67 12 3.67ZM15.5 15.5L11.17 12.83V7.83H12.42V12.17L16.17 14.42L15.5 15.5V15.5Z" fill="white"/>
+                                </svg>
+                                <div class="box-more flex f-center">
+                                    <p>나중에 볼 동영상</p>
+                                </div>
+                            </div>
+                            <div class="box flex f-center">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 10H18V12H9V10ZM6 6H18V8H6V6ZM12 14H18V16H12V14ZM6 12V18L10 15L6 12Z" fill="white"/>
+                                </svg>
+                                <div class="box-more flex f-center">
+                                    <p>목록에 추가</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="content flex">
-                        <div class="text">
-                            <p>우리집 강아지 짱 귀엽다.</p>
+                    <div class="info flex">
+                        <div>
+                            <img src="./imgs/channel/M2.jpg" alt="M2" width="36">
                         </div>
-                        <div class="image o-hidden">
-                        </div>
-                    </div>
-                    <div class="content-bar flex">
-                        <div class="left flex f-center">
-                            <div class="like flex f-center">
-                                <div class="margin-right flex f-center circle">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M1 21H5V9H1V21ZM23 10C23 8.9 22.1 8 21 8H14.69L15.64 3.43L15.67 3.11C15.67 2.7 15.5 2.32 15.23 2.05L14.17 1L7.59 7.59C7.22 7.95 7 8.45 7 9V19C7 20.1 7.9 21 9 21H18C18.83 21 19.54 20.5 19.84 19.78L22.86 12.73C22.95 12.5 23 12.26 23 12V10.09L22.99 10.08L23 10Z"/>
-                                    </svg>
-                                </div>
-                                <p>8.9천</p>
+                        <div class="detail">
+                            <div class="item-title">
+                                <p>[Full Cam] 아이즈원 (IZ*ONE) - Panorama (4K) | IZ*ONE One-reeler Premiere</p>
                             </div>
-                            <div class="dislike">
-                                <div class="margin-right flex f-center circle">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M15 3H6C5.17 3 4.46 3.5 4.16 4.22L1.14 11.27C1.05 11.5 1 11.74 1 12V13.91L1.01 13.92L1 14C1 15.1 1.9 16 3 16H9.31L8.36 20.57L8.33 20.89C8.33 21.3 8.5 21.68 8.77 21.95L9.83 23L16.42 16.41C16.78 16.05 17 15.55 17 15V5C17 3.9 16.1 3 15 3ZM19 3V15H23V3H19Z"/>
-                                    </svg>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="right flex f-center">
-                            <div class="like flex f-center">
-                                <div class="margin-right flex f-center circle">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M21.99 4C21.99 2.9 21.1 2 20 2H4C2.9 2 2 2.9 2 4V16C2 17.1 2.9 18 4 18H18L22 22L21.99 4ZM18 14H6V12H18V14ZM18 11H6V9H18V11ZM18 8H6V6H18V8Z"/>
-                                    </svg>
-                                </div>
-                                <p>12</p>
-                            </div>
-                            <div class="drop">
-                                <div class="dislike button">
-                                    <div class="flex f-center circle">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M12 8C13.1 8 14 7.1 14 6C14 4.9 13.1 4 12 4C10.9 4 10 4.9 10 6C10 7.1 10.9 8 12 8ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10ZM12 16C10.9 16 10 16.9 10 18C10 19.1 10.9 20 12 20C13.1 20 14 19.1 14 18C14 16.9 13.1 16 12 16Z"/>
-                                        </svg>  
-                                    </div>    
-                                </div>
-                                <div class="drop-box d-hidden">
-                                    <div class="tab flex f-center">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M14.4 6L14 4H5v17h2v-7h5.6l.4 2h7V6z" fill="#909090"/>
-                                        </svg>
-                                        <p>신고</p>
+                            <div class="item-info">
+                                <div class="channel flex">
+                                    <div class="tooltip">
+                                        <p>M2</p>
+                                        <div class="tooltip-box d-hidden">
+                                            <p>M2</p>
+                                        </div>
                                     </div>
+                                    <div class="tooltip flex f-center">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM9.92 17.93L4.97 12.98L7.02 10.93L9.92 13.83L17.27 6.48L19.32 8.53L9.92 17.93Z" fill="#606060"/>
+                                        </svg>
+                                        <div class="tooltip-box d-hidden">
+                                            <p>인증됨</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p>조회수 17만회 • 2일 전</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="drop">
+                            <div class="more-dots button o-hidden">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 8C13.1 8 14 7.1 14 6C14 4.9 13.1 4 12 4C10.9 4 10 4.9 10 6C10 7.1 10.9 8 12 8ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10ZM12 16C10.9 16 10 16.9 10 18C10 19.1 10.9 20 12 20C13.1 20 14 19.1 14 18C14 16.9 13.1 16 12 16Z" class="icon-gray"/>
+                                </svg>
+                            </div>
+                            <div class="drop-box d-hidden">
+                                <div class="tab flex f-center">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9,10 L18,10 L18,12 L9,12 L9,10 Z M6,6 L18,6 L18,8 L6,8 L6,6 Z M12,14 L18,14 L18,16 L12,16 L12,14 Z M6,12 L6,18 L10,15 L6,12 Z" fill="#909090"/>
+                                    </svg>
+                                    <p>목록에 추가</p>
+                                </div>
+                                <div class="tab flex f-center">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 3.67c-4.58 0-8.33 3.75-8.33 8.33s3.75 8.33 8.33 8.33 8.33-3.75 8.33-8.33S16.58 3.67 12 3.67zm3.5 11.83l-4.33-2.67v-5h1.25v4.34l3.75 2.25-.67 1.08z" fill="#909090"/>
+                                    </svg>
+                                    <p>나중에 볼 동영상에 저장</p>
+                                </div>
+                                <div class="tab flex f-center">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M14 10H2v2h12v-2zm0-4H2v2h12V6zm4 8v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM2 16h8v-2H2v2z" fill="#909090"/>
+                                    </svg>                                 
+                                    <p>재생목록에 저장</p>
+                                </div>
+                                <div class="top-border">
                                     <div class="tab flex f-center">
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8 0-1.85.63-3.55 1.69-4.9L16.9 18.31C15.55 19.37 13.85 20 12 20zm6.31-3.1L7.1 5.69C8.45 4.63 10.15 4 12 4c4.42 0 8 3.58 8 8 0 1.85-.63 3.55-1.69 4.9z" fill="#909090"/>
@@ -1286,386 +610,1232 @@
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M7 11v2h10v-2H7zm5-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" fill="#909090"/>
                                         </svg>                                   
-                                        <p>채널의 게시물 추천 안함</p>
+                                        <p>채널 추천 안함</p>
+                                    </div>
+                                    <div class="tab flex f-center">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M14.4 6L14 4H5v17h2v-7h5.6l.4 2h7V6z" fill="#909090"/>
+                                        </svg>
+                                        <p>신고</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </a>
+                
+                <a class="item">
+                    <div class="thumbnail">
+                        <img src="./imgs/thumbnail/thumbnail_2.jpg" alt="IZ*ONE (아이즈원) - 'Beware' MV" class="thumbnail-img">
+                        <div class="mouseover d-hidden">
+                            <div class="box flex f-center">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 3.67C7.41998 3.67 3.66998 7.42 3.66998 12C3.66998 16.58 7.41998 20.33 12 20.33C16.58 20.33 20.33 16.58 20.33 12C20.33 7.42 16.58 3.67 12 3.67ZM15.5 15.5L11.17 12.83V7.83H12.42V12.17L16.17 14.42L15.5 15.5V15.5Z" fill="white"/>
+                                </svg>
+                                <div class="box-more flex f-center">
+                                    <p>나중에 볼 동영상</p>
+                                </div>
+                            </div>
+                            <div class="box flex f-center">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 10H18V12H9V10ZM6 6H18V8H6V6ZM12 14H18V16H12V14ZM6 12V18L10 15L6 12Z" fill="white"/>
+                                </svg>
+                                <div class="box-more flex f-center">
+                                    <p>목록에 추가</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info flex">
+                        <div>
+                            <img src="./imgs/channel/IZ_ONE.jpg" alt="official IZ*ONE" width="36">
+                        </div>
+                        <div class="detail">
+                            <div class="item-title">
+                                <p>IZ*ONE (아이즈원) - 'Beware' MV</p>
+                            </div>
+                            <div class="item-info">
+                                <div class="channel flex">
+                                    <div class="tooltip">
+                                        <p>official IZ*ONE</p>
+                                        <div class="tooltip-box d-hidden">
+                                            <p>official IZ*ONE</p>
+                                        </div>
+                                    </div>
+                                    <div class="tooltip flex f-center">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 3V13.55C11.41 13.21 10.73 13 10 13C7.79 13 6 14.79 6 17C6 19.21 7.79 21 10 21C12.21 21 14 19.21 14 17V7H18V3H12Z" fill="#606060"/>
+                                        </svg>
+                                        <div class="tooltip-box d-hidden">
+                                            <p>인증됨</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p>조회수 869만회 • 2개월 전</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="drop">
+                            <div class="more-dots button o-hidden">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 8C13.1 8 14 7.1 14 6C14 4.9 13.1 4 12 4C10.9 4 10 4.9 10 6C10 7.1 10.9 8 12 8ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10ZM12 16C10.9 16 10 16.9 10 18C10 19.1 10.9 20 12 20C13.1 20 14 19.1 14 18C14 16.9 13.1 16 12 16Z" class="icon-gray"/>
+                                </svg>
+                            </div>
+                            <div class="drop-box d-hidden">
+                                <div class="tab flex f-center">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9,10 L18,10 L18,12 L9,12 L9,10 Z M6,6 L18,6 L18,8 L6,8 L6,6 Z M12,14 L18,14 L18,16 L12,16 L12,14 Z M6,12 L6,18 L10,15 L6,12 Z" fill="#909090"/>
+                                    </svg>
+                                    <p>목록에 추가</p>
+                                </div>
+                                <div class="tab flex f-center">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 3.67c-4.58 0-8.33 3.75-8.33 8.33s3.75 8.33 8.33 8.33 8.33-3.75 8.33-8.33S16.58 3.67 12 3.67zm3.5 11.83l-4.33-2.67v-5h1.25v4.34l3.75 2.25-.67 1.08z" fill="#909090"/>
+                                    </svg>
+                                    <p>나중에 볼 동영상에 저장</p>
+                                </div>
+                                <div class="tab flex f-center">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M14 10H2v2h12v-2zm0-4H2v2h12V6zm4 8v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM2 16h8v-2H2v2z" fill="#909090"/>
+                                    </svg>                                 
+                                    <p>재생목록에 저장</p>
+                                </div>
+                                <div class="top-border">
+                                    <div class="tab flex f-center">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8 0-1.85.63-3.55 1.69-4.9L16.9 18.31C15.55 19.37 13.85 20 12 20zm6.31-3.1L7.1 5.69C8.45 4.63 10.15 4 12 4c4.42 0 8 3.58 8 8 0 1.85-.63 3.55-1.69 4.9z" fill="#909090"/>
+                                        </svg>
+                                        <p>관심 없음</p>
+                                    </div>
+                                    <div class="tab flex f-center">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7 11v2h10v-2H7zm5-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" fill="#909090"/>
+                                        </svg>                                   
+                                        <p>채널 추천 안함</p>
+                                    </div>
+                                    <div class="tab flex f-center">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M14.4 6L14 4H5v17h2v-7h5.6l.4 2h7V6z" fill="#909090"/>
+                                        </svg>
+                                        <p>신고</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+    
+                <a class="item">
+                    <div class="thumbnail">
+                        <img src="./imgs/thumbnail/thumbnail_3.jpg" alt="IZ*ONE (아이즈원) - 'Panorama' 응원법" class="thumbnail-img">
+                        <div class="mouseover d-hidden">
+                            <div class="box flex f-center">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 3.67C7.41998 3.67 3.66998 7.42 3.66998 12C3.66998 16.58 7.41998 20.33 12 20.33C16.58 20.33 20.33 16.58 20.33 12C20.33 7.42 16.58 3.67 12 3.67ZM15.5 15.5L11.17 12.83V7.83H12.42V12.17L16.17 14.42L15.5 15.5V15.5Z" fill="white"/>
+                                </svg>
+                                <div class="box-more flex f-center">
+                                    <p>나중에 볼 동영상</p>
+                                </div>
+                            </div>
+                            <div class="box flex f-center">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 10H18V12H9V10ZM6 6H18V8H6V6ZM12 14H18V16H12V14ZM6 12V18L10 15L6 12Z" fill="white"/>
+                                </svg>
+                                <div class="box-more flex f-center">
+                                    <p>목록에 추가</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info flex">
+                        <div>
+                            <img src="./imgs/channel/IZ_ONE.jpg" alt="official IZ*ONE" width="36">
+                        </div>
+                        <div class="detail">
+                            <div class="item-title">
+                                <p>IZ*ONE (아이즈원) - 'Panorama' 응원법</p>
+                            </div>
+                            <div class="item-info">
+                                <div class="channel flex">
+                                    <div class="tooltip">
+                                        <p>official IZ*ONE</p>
+                                        <div class="tooltip-box d-hidden">
+                                            <p>official IZ*ONE</p>
+                                        </div>
+                                    </div>
+                                    <div class="tooltip flex f-center">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 3V13.55C11.41 13.21 10.73 13 10 13C7.79 13 6 14.79 6 17C6 19.21 7.79 21 10 21C12.21 21 14 19.21 14 17V7H18V3H12Z" fill="#606060"/>
+                                        </svg>
+                                        <div class="tooltip-box d-hidden">
+                                            <p>인증됨</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p>조회수 23만회 • 3일 전</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="drop">
+                            <div class="more-dots button o-hidden">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 8C13.1 8 14 7.1 14 6C14 4.9 13.1 4 12 4C10.9 4 10 4.9 10 6C10 7.1 10.9 8 12 8ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10ZM12 16C10.9 16 10 16.9 10 18C10 19.1 10.9 20 12 20C13.1 20 14 19.1 14 18C14 16.9 13.1 16 12 16Z" class="icon-gray"/>
+                                </svg>
+                            </div>
+                            <div class="drop-box d-hidden">
+                                <div class="tab flex f-center">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9,10 L18,10 L18,12 L9,12 L9,10 Z M6,6 L18,6 L18,8 L6,8 L6,6 Z M12,14 L18,14 L18,16 L12,16 L12,14 Z M6,12 L6,18 L10,15 L6,12 Z" fill="#909090"/>
+                                    </svg>
+                                    <p>목록에 추가</p>
+                                </div>
+                                <div class="tab flex f-center">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 3.67c-4.58 0-8.33 3.75-8.33 8.33s3.75 8.33 8.33 8.33 8.33-3.75 8.33-8.33S16.58 3.67 12 3.67zm3.5 11.83l-4.33-2.67v-5h1.25v4.34l3.75 2.25-.67 1.08z" fill="#909090"/>
+                                    </svg>
+                                    <p>나중에 볼 동영상에 저장</p>
+                                </div>
+                                <div class="tab flex f-center">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M14 10H2v2h12v-2zm0-4H2v2h12V6zm4 8v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM2 16h8v-2H2v2z" fill="#909090"/>
+                                    </svg>                                 
+                                    <p>재생목록에 저장</p>
+                                </div>
+                                <div class="top-border">
+                                    <div class="tab flex f-center">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8 0-1.85.63-3.55 1.69-4.9L16.9 18.31C15.55 19.37 13.85 20 12 20zm6.31-3.1L7.1 5.69C8.45 4.63 10.15 4 12 4c4.42 0 8 3.58 8 8 0 1.85-.63 3.55-1.69 4.9z" fill="#909090"/>
+                                        </svg>
+                                        <p>관심 없음</p>
+                                    </div>
+                                    <div class="tab flex f-center">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7 11v2h10v-2H7zm5-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" fill="#909090"/>
+                                        </svg>                                   
+                                        <p>채널 추천 안함</p>
+                                    </div>
+                                    <div class="tab flex f-center">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M14.4 6L14 4H5v17h2v-7h5.6l.4 2h7V6z" fill="#909090"/>
+                                        </svg>
+                                        <p>신고</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+    
+                <a class="item">
+                    <div class="thumbnail">
+                        <img src="./imgs/thumbnail/thumbnail_4.jpg" alt="IZ*ONE (아이즈원) - 'Sequence' 응원법" class="thumbnail-img">
+                        <div class="mouseover d-hidden">
+                            <div class="box flex f-center">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 3.67C7.41998 3.67 3.66998 7.42 3.66998 12C3.66998 16.58 7.41998 20.33 12 20.33C16.58 20.33 20.33 16.58 20.33 12C20.33 7.42 16.58 3.67 12 3.67ZM15.5 15.5L11.17 12.83V7.83H12.42V12.17L16.17 14.42L15.5 15.5V15.5Z" fill="white"/>
+                                </svg>
+                                <div class="box-more flex f-center">
+                                    <p>나중에 볼 동영상</p>
+                                </div>
+                            </div>
+                            <div class="box flex f-center">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 10H18V12H9V10ZM6 6H18V8H6V6ZM12 14H18V16H12V14ZM6 12V18L10 15L6 12Z" fill="white"/>
+                                </svg>
+                                <div class="box-more flex f-center">
+                                    <p>목록에 추가</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info flex">
+                        <div>
+                            <img src="./imgs/channel/IZ_ONE.jpg" alt="official IZ*ONE" width="36">
+                        </div>
+                        <div class="detail">
+                            <div class="item-title">
+                                <p>IZ*ONE (아이즈원) - 'Sequence' 응원법</p>
+                            </div>
+                            <div class="item-info">
+                                <div class="channel flex">
+                                    <div class="tooltip">
+                                        <p>official IZ*ONE</p>
+                                        <div class="tooltip-box d-hidden">
+                                            <p>official IZ*ONE</p>
+                                        </div>
+                                    </div>
+                                    <div class="tooltip flex f-center">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 3V13.55C11.41 13.21 10.73 13 10 13C7.79 13 6 14.79 6 17C6 19.21 7.79 21 10 21C12.21 21 14 19.21 14 17V7H18V3H12Z" fill="#606060"/>
+                                        </svg>
+                                        <div class="tooltip-box d-hidden">
+                                            <p>인증됨</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p>조회수 11만회 • 3일 전</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="drop">
+                            <div class="more-dots button o-hidden">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 8C13.1 8 14 7.1 14 6C14 4.9 13.1 4 12 4C10.9 4 10 4.9 10 6C10 7.1 10.9 8 12 8ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10ZM12 16C10.9 16 10 16.9 10 18C10 19.1 10.9 20 12 20C13.1 20 14 19.1 14 18C14 16.9 13.1 16 12 16Z" class="icon-gray"/>
+                                </svg>
+                            </div>
+                            <div class="drop-box d-hidden">
+                                <div class="tab flex f-center">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9,10 L18,10 L18,12 L9,12 L9,10 Z M6,6 L18,6 L18,8 L6,8 L6,6 Z M12,14 L18,14 L18,16 L12,16 L12,14 Z M6,12 L6,18 L10,15 L6,12 Z" fill="#909090"/>
+                                    </svg>
+                                    <p>목록에 추가</p>
+                                </div>
+                                <div class="tab flex f-center">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 3.67c-4.58 0-8.33 3.75-8.33 8.33s3.75 8.33 8.33 8.33 8.33-3.75 8.33-8.33S16.58 3.67 12 3.67zm3.5 11.83l-4.33-2.67v-5h1.25v4.34l3.75 2.25-.67 1.08z" fill="#909090"/>
+                                    </svg>
+                                    <p>나중에 볼 동영상에 저장</p>
+                                </div>
+                                <div class="tab flex f-center">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M14 10H2v2h12v-2zm0-4H2v2h12V6zm4 8v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM2 16h8v-2H2v2z" fill="#909090"/>
+                                    </svg>                                 
+                                    <p>재생목록에 저장</p>
+                                </div>
+                                <div class="top-border">
+                                    <div class="tab flex f-center">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8 0-1.85.63-3.55 1.69-4.9L16.9 18.31C15.55 19.37 13.85 20 12 20zm6.31-3.1L7.1 5.69C8.45 4.63 10.15 4 12 4c4.42 0 8 3.58 8 8 0 1.85-.63 3.55-1.69 4.9z" fill="#909090"/>
+                                        </svg>
+                                        <p>관심 없음</p>
+                                    </div>
+                                    <div class="tab flex f-center">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7 11v2h10v-2H7zm5-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" fill="#909090"/>
+                                        </svg>                                   
+                                        <p>채널 추천 안함</p>
+                                    </div>
+                                    <div class="tab flex f-center">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M14.4 6L14 4H5v17h2v-7h5.6l.4 2h7V6z" fill="#909090"/>
+                                        </svg>
+                                        <p>신고</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+    
+                <a class="item">
+                    <div class="thumbnail">
+                        <img src="./imgs/thumbnail/thumbnail_5.jpg" alt="IZ*ONE 아케이드Ⅱ (ARCADE Ⅱ) Special EP_Love Lane-마마무 (Cover by CHAEWON, Producer by MINJU of IZ*ONE)" class="thumbnail-img">
+                        <div class="mouseover d-hidden">
+                            <div class="box flex f-center">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 3.67C7.41998 3.67 3.66998 7.42 3.66998 12C3.66998 16.58 7.41998 20.33 12 20.33C16.58 20.33 20.33 16.58 20.33 12C20.33 7.42 16.58 3.67 12 3.67ZM15.5 15.5L11.17 12.83V7.83H12.42V12.17L16.17 14.42L15.5 15.5V15.5Z" fill="white"/>
+                                </svg>
+                                <div class="box-more flex f-center">
+                                    <p>나중에 볼 동영상</p>
+                                </div>
+                            </div>
+                            <div class="box flex f-center">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 10H18V12H9V10ZM6 6H18V8H6V6ZM12 14H18V16H12V14ZM6 12V18L10 15L6 12Z" fill="white"/>
+                                </svg>
+                                <div class="box-more flex f-center">
+                                    <p>목록에 추가</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info flex">
+                        <div>
+                            <img src="./imgs/channel/IZ_ONE.jpg" alt="official IZ*ONE" width="36">
+                        </div>
+                        <div class="detail">
+                            <div class="item-title">
+                                <p>IZ*ONE 아케이드Ⅱ (ARCADE Ⅱ) Special EP_Love Lane-마마무 (Cover by CHAEWON, Producer by MINJU of IZ*ONE)</p>
+                            </div>
+                            <div class="item-info">
+                                <div class="channel flex">
+                                    <div class="tooltip">
+                                        <p>official IZ*ONE</p>
+                                        <div class="tooltip-box d-hidden">
+                                            <p>official IZ*ONE</p>
+                                        </div>
+                                    </div>
+                                    <div class="tooltip flex f-center">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 3V13.55C11.41 13.21 10.73 13 10 13C7.79 13 6 14.79 6 17C6 19.21 7.79 21 10 21C12.21 21 14 19.21 14 17V7H18V3H12Z" fill="#606060"/>
+                                        </svg>
+                                        <div class="tooltip-box d-hidden">
+                                            <p>인증됨</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p>조회수 56만회 • 1개월 전</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="drop">
+                            <div class="more-dots button o-hidden">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 8C13.1 8 14 7.1 14 6C14 4.9 13.1 4 12 4C10.9 4 10 4.9 10 6C10 7.1 10.9 8 12 8ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10ZM12 16C10.9 16 10 16.9 10 18C10 19.1 10.9 20 12 20C13.1 20 14 19.1 14 18C14 16.9 13.1 16 12 16Z" class="icon-gray"/>
+                                </svg>
+                            </div>
+                            <div class="drop-box d-hidden">
+                                <div class="tab flex f-center">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9,10 L18,10 L18,12 L9,12 L9,10 Z M6,6 L18,6 L18,8 L6,8 L6,6 Z M12,14 L18,14 L18,16 L12,16 L12,14 Z M6,12 L6,18 L10,15 L6,12 Z" fill="#909090"/>
+                                    </svg>
+                                    <p>목록에 추가</p>
+                                </div>
+                                <div class="tab flex f-center">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 3.67c-4.58 0-8.33 3.75-8.33 8.33s3.75 8.33 8.33 8.33 8.33-3.75 8.33-8.33S16.58 3.67 12 3.67zm3.5 11.83l-4.33-2.67v-5h1.25v4.34l3.75 2.25-.67 1.08z" fill="#909090"/>
+                                    </svg>
+                                    <p>나중에 볼 동영상에 저장</p>
+                                </div>
+                                <div class="tab flex f-center">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M14 10H2v2h12v-2zm0-4H2v2h12V6zm4 8v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM2 16h8v-2H2v2z" fill="#909090"/>
+                                    </svg>                                 
+                                    <p>재생목록에 저장</p>
+                                </div>
+                                <div class="top-border">
+                                    <div class="tab flex f-center">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8 0-1.85.63-3.55 1.69-4.9L16.9 18.31C15.55 19.37 13.85 20 12 20zm6.31-3.1L7.1 5.69C8.45 4.63 10.15 4 12 4c4.42 0 8 3.58 8 8 0 1.85-.63 3.55-1.69 4.9z" fill="#909090"/>
+                                        </svg>
+                                        <p>관심 없음</p>
+                                    </div>
+                                    <div class="tab flex f-center">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7 11v2h10v-2H7zm5-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" fill="#909090"/>
+                                        </svg>                                   
+                                        <p>채널 추천 안함</p>
+                                    </div>
+                                    <div class="tab flex f-center">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M14.4 6L14 4H5v17h2v-7h5.6l.4 2h7V6z" fill="#909090"/>
+                                        </svg>
+                                        <p>신고</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+    
+                <a class="item">
+                    <div class="thumbnail">
+                        <img src="./imgs/thumbnail/thumbnail_6.jpg" alt="IZ*ONE 아케이드Ⅱ (ARCADE Ⅱ) Special EP_ With*One Self M/V" class="thumbnail-img">
+                        <div class="mouseover d-hidden">
+                            <div class="box flex f-center">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 3.67C7.41998 3.67 3.66998 7.42 3.66998 12C3.66998 16.58 7.41998 20.33 12 20.33C16.58 20.33 20.33 16.58 20.33 12C20.33 7.42 16.58 3.67 12 3.67ZM15.5 15.5L11.17 12.83V7.83H12.42V12.17L16.17 14.42L15.5 15.5V15.5Z" fill="white"/>
+                                </svg>
+                                <div class="box-more flex f-center">
+                                    <p>나중에 볼 동영상</p>
+                                </div>
+                            </div>
+                            <div class="box flex f-center">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 10H18V12H9V10ZM6 6H18V8H6V6ZM12 14H18V16H12V14ZM6 12V18L10 15L6 12Z" fill="white"/>
+                                </svg>
+                                <div class="box-more flex f-center">
+                                    <p>목록에 추가</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info flex">
+                        <div>
+                            <img src="./imgs/channel/IZ_ONE.jpg" alt="official IZ*ONE" width="36">
+                        </div>
+                        <div class="detail">
+                            <div class="item-title">
+                                <p>IZ*ONE 아케이드Ⅱ (ARCADE Ⅱ) Special EP_ With*One Self M/V</p>
+                            </div>
+                            <div class="item-info">
+                                <div class="channel flex">
+                                    <div class="tooltip">
+                                        <p>official IZ*ONE</p>
+                                        <div class="tooltip-box d-hidden">
+                                            <p>official IZ*ONE</p>
+                                        </div>
+                                    </div>
+                                    <div class="tooltip flex f-center">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 3V13.55C11.41 13.21 10.73 13 10 13C7.79 13 6 14.79 6 17C6 19.21 7.79 21 10 21C12.21 21 14 19.21 14 17V7H18V3H12Z" fill="#606060"/>
+                                        </svg>
+                                        <div class="tooltip-box d-hidden">
+                                            <p>인증됨</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p>조회수 40만회 • 1개월 전</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="drop">
+                            <div class="more-dots button o-hidden">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 8C13.1 8 14 7.1 14 6C14 4.9 13.1 4 12 4C10.9 4 10 4.9 10 6C10 7.1 10.9 8 12 8ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10ZM12 16C10.9 16 10 16.9 10 18C10 19.1 10.9 20 12 20C13.1 20 14 19.1 14 18C14 16.9 13.1 16 12 16Z" class="icon-gray"/>
+                                </svg>
+                            </div>
+                            <div class="drop-box d-hidden">
+                                <div class="tab flex f-center">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9,10 L18,10 L18,12 L9,12 L9,10 Z M6,6 L18,6 L18,8 L6,8 L6,6 Z M12,14 L18,14 L18,16 L12,16 L12,14 Z M6,12 L6,18 L10,15 L6,12 Z" fill="#909090"/>
+                                    </svg>
+                                    <p>목록에 추가</p>
+                                </div>
+                                <div class="tab flex f-center">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 3.67c-4.58 0-8.33 3.75-8.33 8.33s3.75 8.33 8.33 8.33 8.33-3.75 8.33-8.33S16.58 3.67 12 3.67zm3.5 11.83l-4.33-2.67v-5h1.25v4.34l3.75 2.25-.67 1.08z" fill="#909090"/>
+                                    </svg>
+                                    <p>나중에 볼 동영상에 저장</p>
+                                </div>
+                                <div class="tab flex f-center">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M14 10H2v2h12v-2zm0-4H2v2h12V6zm4 8v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM2 16h8v-2H2v2z" fill="#909090"/>
+                                    </svg>                                 
+                                    <p>재생목록에 저장</p>
+                                </div>
+                                <div class="top-border">
+                                    <div class="tab flex f-center">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8 0-1.85.63-3.55 1.69-4.9L16.9 18.31C15.55 19.37 13.85 20 12 20zm6.31-3.1L7.1 5.69C8.45 4.63 10.15 4 12 4c4.42 0 8 3.58 8 8 0 1.85-.63 3.55-1.69 4.9z" fill="#909090"/>
+                                        </svg>
+                                        <p>관심 없음</p>
+                                    </div>
+                                    <div class="tab flex f-center">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7 11v2h10v-2H7zm5-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" fill="#909090"/>
+                                        </svg>                                   
+                                        <p>채널 추천 안함</p>
+                                    </div>
+                                    <div class="tab flex f-center">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M14.4 6L14 4H5v17h2v-7h5.6l.4 2h7V6z" fill="#909090"/>
+                                        </svg>
+                                        <p>신고</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+    
+                <a class="item">
+                    <div class="thumbnail">
+                        <img src="./imgs/thumbnail/thumbnail_7.jpg" alt="IZ*ONE 에너지 캠(ENOZI Cam) EP.71" class="thumbnail-img">
+                        <div class="mouseover d-hidden">
+                            <div class="box flex f-center">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 3.67C7.41998 3.67 3.66998 7.42 3.66998 12C3.66998 16.58 7.41998 20.33 12 20.33C16.58 20.33 20.33 16.58 20.33 12C20.33 7.42 16.58 3.67 12 3.67ZM15.5 15.5L11.17 12.83V7.83H12.42V12.17L16.17 14.42L15.5 15.5V15.5Z" fill="white"/>
+                                </svg>
+                                <div class="box-more flex f-center">
+                                    <p>나중에 볼 동영상</p>
+                                </div>
+                            </div>
+                            <div class="box flex f-center">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 10H18V12H9V10ZM6 6H18V8H6V6ZM12 14H18V16H12V14ZM6 12V18L10 15L6 12Z" fill="white"/>
+                                </svg>
+                                <div class="box-more flex f-center">
+                                    <p>목록에 추가</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info flex">
+                        <div>
+                            <img src="./imgs/channel/IZ_ONE.jpg" alt="official IZ*ONE" width="36">
+                        </div>
+                        <div class="detail">
+                            <div class="item-title">
+                                <p>IZ*ONE 에너지 캠(ENOZI Cam) EP.71</p>
+                            </div>
+                            <div class="item-info">
+                                <div class="channel flex">
+                                    <div class="tooltip">
+                                        <p>official IZ*ONE</p>
+                                        <div class="tooltip-box d-hidden">
+                                            <p>official IZ*ONE</p>
+                                        </div>
+                                    </div>
+                                    <div class="tooltip flex f-center">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 3V13.55C11.41 13.21 10.73 13 10 13C7.79 13 6 14.79 6 17C6 19.21 7.79 21 10 21C12.21 21 14 19.21 14 17V7H18V3H12Z" fill="#606060"/>
+                                        </svg>
+                                        <div class="tooltip-box d-hidden">
+                                            <p>인증됨</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p>조회수 36만회 • 2개월 전</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="drop">
+                            <div class="more-dots button o-hidden">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 8C13.1 8 14 7.1 14 6C14 4.9 13.1 4 12 4C10.9 4 10 4.9 10 6C10 7.1 10.9 8 12 8ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10ZM12 16C10.9 16 10 16.9 10 18C10 19.1 10.9 20 12 20C13.1 20 14 19.1 14 18C14 16.9 13.1 16 12 16Z" class="icon-gray"/>
+                                </svg>
+                            </div>
+                            <div class="drop-box d-hidden">
+                                <div class="tab flex f-center">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9,10 L18,10 L18,12 L9,12 L9,10 Z M6,6 L18,6 L18,8 L6,8 L6,6 Z M12,14 L18,14 L18,16 L12,16 L12,14 Z M6,12 L6,18 L10,15 L6,12 Z" fill="#909090"/>
+                                    </svg>
+                                    <p>목록에 추가</p>
+                                </div>
+                                <div class="tab flex f-center">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 3.67c-4.58 0-8.33 3.75-8.33 8.33s3.75 8.33 8.33 8.33 8.33-3.75 8.33-8.33S16.58 3.67 12 3.67zm3.5 11.83l-4.33-2.67v-5h1.25v4.34l3.75 2.25-.67 1.08z" fill="#909090"/>
+                                    </svg>
+                                    <p>나중에 볼 동영상에 저장</p>
+                                </div>
+                                <div class="tab flex f-center">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M14 10H2v2h12v-2zm0-4H2v2h12V6zm4 8v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM2 16h8v-2H2v2z" fill="#909090"/>
+                                    </svg>                                 
+                                    <p>재생목록에 저장</p>
+                                </div>
+                                <div class="top-border">
+                                    <div class="tab flex f-center">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8 0-1.85.63-3.55 1.69-4.9L16.9 18.31C15.55 19.37 13.85 20 12 20zm6.31-3.1L7.1 5.69C8.45 4.63 10.15 4 12 4c4.42 0 8 3.58 8 8 0 1.85-.63 3.55-1.69 4.9z" fill="#909090"/>
+                                        </svg>
+                                        <p>관심 없음</p>
+                                    </div>
+                                    <div class="tab flex f-center">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7 11v2h10v-2H7zm5-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" fill="#909090"/>
+                                        </svg>                                   
+                                        <p>채널 추천 안함</p>
+                                    </div>
+                                    <div class="tab flex f-center">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M14.4 6L14 4H5v17h2v-7h5.6l.4 2h7V6z" fill="#909090"/>
+                                        </svg>
+                                        <p>신고</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+    
+                <a class="item">
+                    <div class="thumbnail">
+                        <img src="./imgs/thumbnail/thumbnail_8.jpg" alt="우리 집 강아지 짱귀엽다." class="thumbnail-img">
+                        <div class="mouseover d-hidden">
+                            <div class="box flex f-center">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 3.67C7.41998 3.67 3.66998 7.42 3.66998 12C3.66998 16.58 7.41998 20.33 12 20.33C16.58 20.33 20.33 16.58 20.33 12C20.33 7.42 16.58 3.67 12 3.67ZM15.5 15.5L11.17 12.83V7.83H12.42V12.17L16.17 14.42L15.5 15.5V15.5Z" fill="white"/>
+                                </svg>
+                                <div class="box-more flex f-center">
+                                    <p>나중에 볼 동영상</p>
+                                </div>
+                            </div>
+                            <div class="box flex f-center">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 10H18V12H9V10ZM6 6H18V8H6V6ZM12 14H18V16H12V14ZM6 12V18L10 15L6 12Z" fill="white"/>
+                                </svg>
+                                <div class="box-more flex f-center">
+                                    <p>목록에 추가</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info flex">
+                        <div>
+                            <img src="./imgs/channel/spuri.jpg" alt="spuri" width="36">
+                        </div>
+                        <div class="detail">
+                            <div class="item-title">
+                                <p>우리집 강아지 짱귀엽다.</p>
+                            </div>
+                            <div class="item-info">
+                                <div class="channel flex">
+                                    <div class="tooltip">
+                                        <p>w00ss</p>
+                                        <div class="tooltip-box d-hidden">
+                                            <p>w00ss</p>
+                                        </div>
+                                    </div>    
+                                </div>
+                                <div>
+                                    <p>조회수 3회 • 1일 전</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="drop">
+                            <div class="more-dots button o-hidden">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 8C13.1 8 14 7.1 14 6C14 4.9 13.1 4 12 4C10.9 4 10 4.9 10 6C10 7.1 10.9 8 12 8ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10ZM12 16C10.9 16 10 16.9 10 18C10 19.1 10.9 20 12 20C13.1 20 14 19.1 14 18C14 16.9 13.1 16 12 16Z" class="icon-gray"/>
+                                </svg>
+                            </div>
+                            <div class="drop-box d-hidden">
+                                <div class="tab flex f-center">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9,10 L18,10 L18,12 L9,12 L9,10 Z M6,6 L18,6 L18,8 L6,8 L6,6 Z M12,14 L18,14 L18,16 L12,16 L12,14 Z M6,12 L6,18 L10,15 L6,12 Z" fill="#909090"/>
+                                    </svg>
+                                    <p>목록에 추가</p>
+                                </div>
+                                <div class="tab flex f-center">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 3.67c-4.58 0-8.33 3.75-8.33 8.33s3.75 8.33 8.33 8.33 8.33-3.75 8.33-8.33S16.58 3.67 12 3.67zm3.5 11.83l-4.33-2.67v-5h1.25v4.34l3.75 2.25-.67 1.08z" fill="#909090"/>
+                                    </svg>
+                                    <p>나중에 볼 동영상에 저장</p>
+                                </div>
+                                <div class="tab flex f-center">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M14 10H2v2h12v-2zm0-4H2v2h12V6zm4 8v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM2 16h8v-2H2v2z" fill="#909090"/>
+                                    </svg>                                 
+                                    <p>재생목록에 저장</p>
+                                </div>
+                                <div class="top-border">
+                                    <div class="tab flex f-center">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8 0-1.85.63-3.55 1.69-4.9L16.9 18.31C15.55 19.37 13.85 20 12 20zm6.31-3.1L7.1 5.69C8.45 4.63 10.15 4 12 4c4.42 0 8 3.58 8 8 0 1.85-.63 3.55-1.69 4.9z" fill="#909090"/>
+                                        </svg>
+                                        <p>관심 없음</p>
+                                    </div>
+                                    <div class="tab flex f-center">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7 11v2h10v-2H7zm5-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" fill="#909090"/>
+                                        </svg>                                   
+                                        <p>채널 추천 안함</p>
+                                    </div>
+                                    <div class="tab flex f-center">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M14.4 6L14 4H5v17h2v-7h5.6l.4 2h7V6z" fill="#909090"/>
+                                        </svg>
+                                        <p>신고</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+    
             </div>
-
-        </div>
-
-        <div class="items flex">
-            <a class="item">
-                <div class="thumbnail">
-                    <img src="./imgs/thumbnail/thumbnail_9.jpg" alt="IZ*ONE (아이즈원) 'Panorama' MV" width="360">
-                    <div class="mouseover d-hidden">
-                        <div class="box flex f-center">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 3.67C7.41998 3.67 3.66998 7.42 3.66998 12C3.66998 16.58 7.41998 20.33 12 20.33C16.58 20.33 20.33 16.58 20.33 12C20.33 7.42 16.58 3.67 12 3.67ZM15.5 15.5L11.17 12.83V7.83H12.42V12.17L16.17 14.42L15.5 15.5V15.5Z" fill="white"/>
-                            </svg>
-                            <div class="box-more flex f-center">
-                                <p>나중에 볼 동영상</p>
-                            </div>
-                        </div>
-                        <div class="box flex f-center">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M9 10H18V12H9V10ZM6 6H18V8H6V6ZM12 14H18V16H12V14ZM6 12V18L10 15L6 12Z" fill="white"/>
-                            </svg>
-                            <div class="box-more flex f-center">
-                                <p>목록에 추가</p>
-                            </div>
-                        </div>
-                    </div>
+    
+            <div class="post-box flex">
+                <div class="post-title">
+                    최신 YouTube 게시물
                 </div>
-                <div class="info flex">
-                    <div>
-                        <img src="./imgs/channel/IZ_ONE.jpg" alt="official IZ*ONE" width="36">
-                    </div>
-                    <div class="detail">
-                        <div class="item-title">
-                            <p>IZ*ONE (아이즈원) 'Panorama' MV</p>
+                <div class="posts flex">
+                    
+                    <a class="post flex">
+                        <div class="info flex f-center">
+                            <img src="./imgs/channel/spuri.jpg" alt="spuri" width="24">
+                            <p class="channel flex">w00ss</p>
+                            <p>•</p>
+                            <p class="channel flex">6시간 전</p>
                         </div>
-                        <div class="item-info">
-                            <div class="channel flex">
-                                <p>official IZ*ONE</p>
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 3V13.55C11.41 13.21 10.73 13 10 13C7.79 13 6 14.79 6 17C6 19.21 7.79 21 10 21C12.21 21 14 19.21 14 17V7H18V3H12Z" fill="#606060"/>
-                                </svg>
+                        <div class="content flex">
+                            <div class="text">
+                                <p>우리집 강아지 짱 귀엽다.</p>
                             </div>
-                            <div>
-                                <p>조회수 1648만회 • 4일 전</p>
+                            <div class="image o-hidden">
                             </div>
                         </div>
-                    </div>
-                    <div class="drop">
-                        <div class="more-dots button o-hidden">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 8C13.1 8 14 7.1 14 6C14 4.9 13.1 4 12 4C10.9 4 10 4.9 10 6C10 7.1 10.9 8 12 8ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10ZM12 16C10.9 16 10 16.9 10 18C10 19.1 10.9 20 12 20C13.1 20 14 19.1 14 18C14 16.9 13.1 16 12 16Z" class="icon-gray"/>
-                            </svg>
-                        </div>
-                        <div class="drop-box d-hidden">
-                            <div class="tab flex f-center">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9,10 L18,10 L18,12 L9,12 L9,10 Z M6,6 L18,6 L18,8 L6,8 L6,6 Z M12,14 L18,14 L18,16 L12,16 L12,14 Z M6,12 L6,18 L10,15 L6,12 Z" fill="#909090"/>
-                                </svg>
-                                <p>목록에 추가</p>
-                            </div>
-                            <div class="tab flex f-center">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 3.67c-4.58 0-8.33 3.75-8.33 8.33s3.75 8.33 8.33 8.33 8.33-3.75 8.33-8.33S16.58 3.67 12 3.67zm3.5 11.83l-4.33-2.67v-5h1.25v4.34l3.75 2.25-.67 1.08z" fill="#909090"/>
-                                </svg>
-                                <p>나중에 볼 동영상에 저장</p>
-                            </div>
-                            <div class="tab flex f-center">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M14 10H2v2h12v-2zm0-4H2v2h12V6zm4 8v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM2 16h8v-2H2v2z" fill="#909090"/>
-                                </svg>                                 
-                                <p>재생목록에 저장</p>
-                            </div>
-                            <div class="top-border">
-                                <div class="tab flex f-center">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8 0-1.85.63-3.55 1.69-4.9L16.9 18.31C15.55 19.37 13.85 20 12 20zm6.31-3.1L7.1 5.69C8.45 4.63 10.15 4 12 4c4.42 0 8 3.58 8 8 0 1.85-.63 3.55-1.69 4.9z" fill="#909090"/>
-                                    </svg>
-                                    <p>관심 없음</p>
+                        <div class="content-bar flex">
+                            <div class="left flex f-center">
+                                <div class="like flex f-center">
+                                    <div class="margin-right flex f-center circle">
+                                        <div class="tooltip flex f-center">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 21H5V9H1V21ZM23 10C23 8.9 22.1 8 21 8H14.69L15.64 3.43L15.67 3.11C15.67 2.7 15.5 2.32 15.23 2.05L14.17 1L7.59 7.59C7.22 7.95 7 8.45 7 9V19C7 20.1 7.9 21 9 21H18C18.83 21 19.54 20.5 19.84 19.78L22.86 12.73C22.95 12.5 23 12.26 23 12V10.09L22.99 10.08L23 10Z"/>
+                                            </svg>
+                                            <div class="tooltip-box d-hidden">
+                                                <p>좋아요</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p>8.9천</p>
                                 </div>
-                                <div class="tab flex f-center">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M7 11v2h10v-2H7zm5-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" fill="#909090"/>
-                                    </svg>                                   
-                                    <p>채널 추천 안함</p>
-                                </div>
-                                <div class="tab flex f-center">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M14.4 6L14 4H5v17h2v-7h5.6l.4 2h7V6z" fill="#909090"/>
-                                    </svg>
-                                    <p>신고</p>
+                                <div class="dislike">
+                                    <div class="margin-right flex f-center circle tooltip">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M15 3H6C5.17 3 4.46 3.5 4.16 4.22L1.14 11.27C1.05 11.5 1 11.74 1 12V13.91L1.01 13.92L1 14C1 15.1 1.9 16 3 16H9.31L8.36 20.57L8.33 20.89C8.33 21.3 8.5 21.68 8.77 21.95L9.83 23L16.42 16.41C16.78 16.05 17 15.55 17 15V5C17 3.9 16.1 3 15 3ZM19 3V15H23V3H19Z"/>
+                                        </svg>
+                                        <div class="tooltip-box d-hidden">
+                                            <p>싫어요</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+                            <div class="right flex f-center">
+                                <div class="like flex f-center">
+                                    <div class="margin-right flex f-center circle tooltip">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M21.99 4C21.99 2.9 21.1 2 20 2H4C2.9 2 2 2.9 2 4V16C2 17.1 2.9 18 4 18H18L22 22L21.99 4ZM18 14H6V12H18V14ZM18 11H6V9H18V11ZM18 8H6V6H18V8Z"/>
+                                        </svg>
+                                        <div class="tooltip-box bottom d-hidden">
+                                            <p>댓글</p>
+                                        </div>
+                                    </div>
+                                    <p>12</p>
+                                </div>
+                                <div class="drop">
+                                    <div class="dislike button">
+                                        <div class="flex f-center circle">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12 8C13.1 8 14 7.1 14 6C14 4.9 13.1 4 12 4C10.9 4 10 4.9 10 6C10 7.1 10.9 8 12 8ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10ZM12 16C10.9 16 10 16.9 10 18C10 19.1 10.9 20 12 20C13.1 20 14 19.1 14 18C14 16.9 13.1 16 12 16Z"/>
+                                            </svg>  
+                                        </div>    
+                                    </div>
+                                    <div class="drop-box d-hidden">
+                                        <div class="tab flex f-center">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M14.4 6L14 4H5v17h2v-7h5.6l.4 2h7V6z" fill="#909090"/>
+                                            </svg>
+                                            <p>신고</p>
+                                        </div>
+                                        <div class="tab flex f-center">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8 0-1.85.63-3.55 1.69-4.9L16.9 18.31C15.55 19.37 13.85 20 12 20zm6.31-3.1L7.1 5.69C8.45 4.63 10.15 4 12 4c4.42 0 8 3.58 8 8 0 1.85-.63 3.55-1.69 4.9z" fill="#909090"/>
+                                            </svg>
+                                            <p>관심 없음</p>
+                                        </div>
+                                        <div class="tab flex f-center">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M7 11v2h10v-2H7zm5-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" fill="#909090"/>
+                                            </svg>                                   
+                                            <p>채널의 게시물 추천 안함</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
-            </a>
-
-            <a class="item">
-                <div class="thumbnail">
-                    <img src="./imgs/thumbnail/thumbnail_10.jpg" alt="IZ*ONE 아케이드Ⅱ (ARCADE Ⅱ) Special EP_밍굴몽글" width="360">
-                    <div class="mouseover d-hidden">
-                        <div class="box flex f-center">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 3.67C7.41998 3.67 3.66998 7.42 3.66998 12C3.66998 16.58 7.41998 20.33 12 20.33C16.58 20.33 20.33 16.58 20.33 12C20.33 7.42 16.58 3.67 12 3.67ZM15.5 15.5L11.17 12.83V7.83H12.42V12.17L16.17 14.42L15.5 15.5V15.5Z" fill="white"/>
-                            </svg>
-                            <div class="box-more flex f-center">
-                                <p>나중에 볼 동영상</p>
+    
+            </div>
+    
+            <div class="items flex">
+                <a class="item">
+                    <div class="thumbnail">
+                        <img src="./imgs/thumbnail/thumbnail_9.jpg" alt="IZ*ONE (아이즈원) 'Panorama' MV" class="thumbnail-img">
+                        <div class="mouseover d-hidden">
+                            <div class="box flex f-center">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 3.67C7.41998 3.67 3.66998 7.42 3.66998 12C3.66998 16.58 7.41998 20.33 12 20.33C16.58 20.33 20.33 16.58 20.33 12C20.33 7.42 16.58 3.67 12 3.67ZM15.5 15.5L11.17 12.83V7.83H12.42V12.17L16.17 14.42L15.5 15.5V15.5Z" fill="white"/>
+                                </svg>
+                                <div class="box-more flex f-center">
+                                    <p>나중에 볼 동영상</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="box flex f-center">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M9 10H18V12H9V10ZM6 6H18V8H6V6ZM12 14H18V16H12V14ZM6 12V18L10 15L6 12Z" fill="white"/>
-                            </svg>
-                            <div class="box-more flex f-center">
-                                <p>목록에 추가</p>
+                            <div class="box flex f-center">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 10H18V12H9V10ZM6 6H18V8H6V6ZM12 14H18V16H12V14ZM6 12V18L10 15L6 12Z" fill="white"/>
+                                </svg>
+                                <div class="box-more flex f-center">
+                                    <p>목록에 추가</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="info flex">
-                    <div>
-                        <img src="./imgs/channel/IZ_ONE.jpg" alt="official IZ*ONE" width="36">
-                    </div>
-                    <div class="detail">
-                        <div class="item-title">
-                            <p>IZ*ONE 아케이드Ⅱ (ARCADE Ⅱ) Special EP_밍굴몽글</p>
+                    <div class="info flex">
+                        <div>
+                            <img src="./imgs/channel/IZ_ONE.jpg" alt="official IZ*ONE" width="36">
                         </div>
-                        <div class="item-info">
-                            <div class="channel flex">
-                                <p>official IZ*ONE</p>
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 3V13.55C11.41 13.21 10.73 13 10 13C7.79 13 6 14.79 6 17C6 19.21 7.79 21 10 21C12.21 21 14 19.21 14 17V7H18V3H12Z" fill="#606060"/>
+                        <div class="detail">
+                            <div class="item-title">
+                                <p>IZ*ONE (아이즈원) 'Panorama' MV</p>
+                            </div>
+                            <div class="item-info">
+                                <div class="channel flex">
+                                    <div class="tooltip">
+                                        <p>official IZ*ONE</p>
+                                        <div class="tooltip-box d-hidden">
+                                            <p>official IZ*ONE</p>
+                                        </div>
+                                    </div>
+                                    <div class="tooltip flex f-center">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 3V13.55C11.41 13.21 10.73 13 10 13C7.79 13 6 14.79 6 17C6 19.21 7.79 21 10 21C12.21 21 14 19.21 14 17V7H18V3H12Z" fill="#606060"/>
+                                        </svg>
+                                        <div class="tooltip-box d-hidden">
+                                            <p>인증됨</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p>조회수 1648만회 • 4일 전</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="drop">
+                            <div class="more-dots button o-hidden">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 8C13.1 8 14 7.1 14 6C14 4.9 13.1 4 12 4C10.9 4 10 4.9 10 6C10 7.1 10.9 8 12 8ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10ZM12 16C10.9 16 10 16.9 10 18C10 19.1 10.9 20 12 20C13.1 20 14 19.1 14 18C14 16.9 13.1 16 12 16Z" class="icon-gray"/>
                                 </svg>
                             </div>
-                            <div>
-                                <p>조회수 42만회 • 6개월 전</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="drop">
-                        <div class="more-dots button o-hidden">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 8C13.1 8 14 7.1 14 6C14 4.9 13.1 4 12 4C10.9 4 10 4.9 10 6C10 7.1 10.9 8 12 8ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10ZM12 16C10.9 16 10 16.9 10 18C10 19.1 10.9 20 12 20C13.1 20 14 19.1 14 18C14 16.9 13.1 16 12 16Z" class="icon-gray"/>
-                            </svg>
-                        </div>
-                        <div class="drop-box d-hidden">
-                            <div class="tab flex f-center">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9,10 L18,10 L18,12 L9,12 L9,10 Z M6,6 L18,6 L18,8 L6,8 L6,6 Z M12,14 L18,14 L18,16 L12,16 L12,14 Z M6,12 L6,18 L10,15 L6,12 Z" fill="#909090"/>
-                                </svg>
-                                <p>목록에 추가</p>
-                            </div>
-                            <div class="tab flex f-center">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 3.67c-4.58 0-8.33 3.75-8.33 8.33s3.75 8.33 8.33 8.33 8.33-3.75 8.33-8.33S16.58 3.67 12 3.67zm3.5 11.83l-4.33-2.67v-5h1.25v4.34l3.75 2.25-.67 1.08z" fill="#909090"/>
-                                </svg>
-                                <p>나중에 볼 동영상에 저장</p>
-                            </div>
-                            <div class="tab flex f-center">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M14 10H2v2h12v-2zm0-4H2v2h12V6zm4 8v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM2 16h8v-2H2v2z" fill="#909090"/>
-                                </svg>                                 
-                                <p>재생목록에 저장</p>
-                            </div>
-                            <div class="top-border">
+                            <div class="drop-box d-hidden">
                                 <div class="tab flex f-center">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8 0-1.85.63-3.55 1.69-4.9L16.9 18.31C15.55 19.37 13.85 20 12 20zm6.31-3.1L7.1 5.69C8.45 4.63 10.15 4 12 4c4.42 0 8 3.58 8 8 0 1.85-.63 3.55-1.69 4.9z" fill="#909090"/>
+                                        <path d="M9,10 L18,10 L18,12 L9,12 L9,10 Z M6,6 L18,6 L18,8 L6,8 L6,6 Z M12,14 L18,14 L18,16 L12,16 L12,14 Z M6,12 L6,18 L10,15 L6,12 Z" fill="#909090"/>
                                     </svg>
-                                    <p>관심 없음</p>
+                                    <p>목록에 추가</p>
                                 </div>
                                 <div class="tab flex f-center">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M7 11v2h10v-2H7zm5-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" fill="#909090"/>
-                                    </svg>                                   
-                                    <p>채널 추천 안함</p>
-                                </div>
-                                <div class="tab flex f-center">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M14.4 6L14 4H5v17h2v-7h5.6l.4 2h7V6z" fill="#909090"/>
+                                        <path d="M12 3.67c-4.58 0-8.33 3.75-8.33 8.33s3.75 8.33 8.33 8.33 8.33-3.75 8.33-8.33S16.58 3.67 12 3.67zm3.5 11.83l-4.33-2.67v-5h1.25v4.34l3.75 2.25-.67 1.08z" fill="#909090"/>
                                     </svg>
-                                    <p>신고</p>
+                                    <p>나중에 볼 동영상에 저장</p>
+                                </div>
+                                <div class="tab flex f-center">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M14 10H2v2h12v-2zm0-4H2v2h12V6zm4 8v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM2 16h8v-2H2v2z" fill="#909090"/>
+                                    </svg>                                 
+                                    <p>재생목록에 저장</p>
+                                </div>
+                                <div class="top-border">
+                                    <div class="tab flex f-center">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8 0-1.85.63-3.55 1.69-4.9L16.9 18.31C15.55 19.37 13.85 20 12 20zm6.31-3.1L7.1 5.69C8.45 4.63 10.15 4 12 4c4.42 0 8 3.58 8 8 0 1.85-.63 3.55-1.69 4.9z" fill="#909090"/>
+                                        </svg>
+                                        <p>관심 없음</p>
+                                    </div>
+                                    <div class="tab flex f-center">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7 11v2h10v-2H7zm5-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" fill="#909090"/>
+                                        </svg>                                   
+                                        <p>채널 추천 안함</p>
+                                    </div>
+                                    <div class="tab flex f-center">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M14.4 6L14 4H5v17h2v-7h5.6l.4 2h7V6z" fill="#909090"/>
+                                        </svg>
+                                        <p>신고</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </a>
-
-            <a class="item">
-                <div class="thumbnail">
-                    <img src="./imgs/thumbnail/thumbnail_11.jpg" alt="[최초공개] 아이즈원 (IZ*ONE) - Sequence (4K) | IZ*ONE One-reeler Premiere" width="360">
-                    <div class="mouseover d-hidden">
-                        <div class="box flex f-center">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 3.67C7.41998 3.67 3.66998 7.42 3.66998 12C3.66998 16.58 7.41998 20.33 12 20.33C16.58 20.33 20.33 16.58 20.33 12C20.33 7.42 16.58 3.67 12 3.67ZM15.5 15.5L11.17 12.83V7.83H12.42V12.17L16.17 14.42L15.5 15.5V15.5Z" fill="white"/>
-                            </svg>
-                            <div class="box-more flex f-center">
-                                <p>나중에 볼 동영상</p>
+                </a>
+    
+                <a class="item">
+                    <div class="thumbnail">
+                        <img src="./imgs/thumbnail/thumbnail_10.jpg" alt="IZ*ONE 아케이드Ⅱ (ARCADE Ⅱ) Special EP_밍굴몽글" class="thumbnail-img">
+                        <div class="mouseover d-hidden">
+                            <div class="box flex f-center">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 3.67C7.41998 3.67 3.66998 7.42 3.66998 12C3.66998 16.58 7.41998 20.33 12 20.33C16.58 20.33 20.33 16.58 20.33 12C20.33 7.42 16.58 3.67 12 3.67ZM15.5 15.5L11.17 12.83V7.83H12.42V12.17L16.17 14.42L15.5 15.5V15.5Z" fill="white"/>
+                                </svg>
+                                <div class="box-more flex f-center">
+                                    <p>나중에 볼 동영상</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="box flex f-center">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M9 10H18V12H9V10ZM6 6H18V8H6V6ZM12 14H18V16H12V14ZM6 12V18L10 15L6 12Z" fill="white"/>
-                            </svg>
-                            <div class="box-more flex f-center">
-                                <p>목록에 추가</p>
+                            <div class="box flex f-center">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 10H18V12H9V10ZM6 6H18V8H6V6ZM12 14H18V16H12V14ZM6 12V18L10 15L6 12Z" fill="white"/>
+                                </svg>
+                                <div class="box-more flex f-center">
+                                    <p>목록에 추가</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="info flex">
-                    <div>
-                        <img src="./imgs/channel/M2.jpg" alt="M2" width="36">
-                    </div>
-                    <div class="detail">
-                        <div class="item-title">
-                            <p>[최초공개] 아이즈원 (IZ*ONE) - Sequence (4K) | IZ*ONE One-reeler Premiere</p>
+                    <div class="info flex">
+                        <div>
+                            <img src="./imgs/channel/IZ_ONE.jpg" alt="official IZ*ONE" width="36">
                         </div>
-                        <div class="item-info">
-                            <div class="channel flex">
-                                <p>M2</p>
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM9.92 17.93L4.97 12.98L7.02 10.93L9.92 13.83L17.27 6.48L19.32 8.53L9.92 17.93Z" fill="#606060"/>
+                        <div class="detail">
+                            <div class="item-title">
+                                <p>IZ*ONE 아케이드Ⅱ (ARCADE Ⅱ) Special EP_밍굴몽글</p>
+                            </div>
+                            <div class="item-info">
+                                <div class="channel flex">
+                                    <div class="tooltip">
+                                        <p>official IZ*ONE</p>
+                                        <div class="tooltip-box d-hidden">
+                                            <p>official IZ*ONE</p>
+                                        </div>
+                                    </div>
+                                    <div class="tooltip flex f-center">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 3V13.55C11.41 13.21 10.73 13 10 13C7.79 13 6 14.79 6 17C6 19.21 7.79 21 10 21C12.21 21 14 19.21 14 17V7H18V3H12Z" fill="#606060"/>
+                                        </svg>
+                                        <div class="tooltip-box d-hidden">
+                                            <p>인증됨</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p>조회수 42만회 • 6개월 전</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="drop">
+                            <div class="more-dots button o-hidden">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 8C13.1 8 14 7.1 14 6C14 4.9 13.1 4 12 4C10.9 4 10 4.9 10 6C10 7.1 10.9 8 12 8ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10ZM12 16C10.9 16 10 16.9 10 18C10 19.1 10.9 20 12 20C13.1 20 14 19.1 14 18C14 16.9 13.1 16 12 16Z" class="icon-gray"/>
                                 </svg>
                             </div>
-                            <div>
-                                <p>조회수 143만회 • 4일 전</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="drop">
-                        <div class="more-dots button o-hidden">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 8C13.1 8 14 7.1 14 6C14 4.9 13.1 4 12 4C10.9 4 10 4.9 10 6C10 7.1 10.9 8 12 8ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10ZM12 16C10.9 16 10 16.9 10 18C10 19.1 10.9 20 12 20C13.1 20 14 19.1 14 18C14 16.9 13.1 16 12 16Z" class="icon-gray"/>
-                            </svg>
-                        </div>
-                        <div class="drop-box d-hidden">
-                            <div class="tab flex f-center">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9,10 L18,10 L18,12 L9,12 L9,10 Z M6,6 L18,6 L18,8 L6,8 L6,6 Z M12,14 L18,14 L18,16 L12,16 L12,14 Z M6,12 L6,18 L10,15 L6,12 Z" fill="#909090"/>
-                                </svg>
-                                <p>목록에 추가</p>
-                            </div>
-                            <div class="tab flex f-center">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 3.67c-4.58 0-8.33 3.75-8.33 8.33s3.75 8.33 8.33 8.33 8.33-3.75 8.33-8.33S16.58 3.67 12 3.67zm3.5 11.83l-4.33-2.67v-5h1.25v4.34l3.75 2.25-.67 1.08z" fill="#909090"/>
-                                </svg>
-                                <p>나중에 볼 동영상에 저장</p>
-                            </div>
-                            <div class="tab flex f-center">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M14 10H2v2h12v-2zm0-4H2v2h12V6zm4 8v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM2 16h8v-2H2v2z" fill="#909090"/>
-                                </svg>                                 
-                                <p>재생목록에 저장</p>
-                            </div>
-                            <div class="top-border">
+                            <div class="drop-box d-hidden">
                                 <div class="tab flex f-center">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8 0-1.85.63-3.55 1.69-4.9L16.9 18.31C15.55 19.37 13.85 20 12 20zm6.31-3.1L7.1 5.69C8.45 4.63 10.15 4 12 4c4.42 0 8 3.58 8 8 0 1.85-.63 3.55-1.69 4.9z" fill="#909090"/>
+                                        <path d="M9,10 L18,10 L18,12 L9,12 L9,10 Z M6,6 L18,6 L18,8 L6,8 L6,6 Z M12,14 L18,14 L18,16 L12,16 L12,14 Z M6,12 L6,18 L10,15 L6,12 Z" fill="#909090"/>
                                     </svg>
-                                    <p>관심 없음</p>
+                                    <p>목록에 추가</p>
                                 </div>
                                 <div class="tab flex f-center">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M7 11v2h10v-2H7zm5-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" fill="#909090"/>
-                                    </svg>                                   
-                                    <p>채널 추천 안함</p>
-                                </div>
-                                <div class="tab flex f-center">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M14.4 6L14 4H5v17h2v-7h5.6l.4 2h7V6z" fill="#909090"/>
+                                        <path d="M12 3.67c-4.58 0-8.33 3.75-8.33 8.33s3.75 8.33 8.33 8.33 8.33-3.75 8.33-8.33S16.58 3.67 12 3.67zm3.5 11.83l-4.33-2.67v-5h1.25v4.34l3.75 2.25-.67 1.08z" fill="#909090"/>
                                     </svg>
-                                    <p>신고</p>
+                                    <p>나중에 볼 동영상에 저장</p>
+                                </div>
+                                <div class="tab flex f-center">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M14 10H2v2h12v-2zm0-4H2v2h12V6zm4 8v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM2 16h8v-2H2v2z" fill="#909090"/>
+                                    </svg>                                 
+                                    <p>재생목록에 저장</p>
+                                </div>
+                                <div class="top-border">
+                                    <div class="tab flex f-center">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8 0-1.85.63-3.55 1.69-4.9L16.9 18.31C15.55 19.37 13.85 20 12 20zm6.31-3.1L7.1 5.69C8.45 4.63 10.15 4 12 4c4.42 0 8 3.58 8 8 0 1.85-.63 3.55-1.69 4.9z" fill="#909090"/>
+                                        </svg>
+                                        <p>관심 없음</p>
+                                    </div>
+                                    <div class="tab flex f-center">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7 11v2h10v-2H7zm5-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" fill="#909090"/>
+                                        </svg>                                   
+                                        <p>채널 추천 안함</p>
+                                    </div>
+                                    <div class="tab flex f-center">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M14.4 6L14 4H5v17h2v-7h5.6l.4 2h7V6z" fill="#909090"/>
+                                        </svg>
+                                        <p>신고</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </a>
-
-            <a class="item">
-                <div class="thumbnail">
-                    <img src="./imgs/thumbnail/thumbnail_12.jpg" alt="[입덕직캠] 아이즈원 김채원 직캠 4K ‘Sequence’ (IZ*ONE Kim Chaewon FanCam) | @IZ*ONE One-reeler Premiere" width="360">
-                    <div class="mouseover d-hidden">
-                        <div class="box flex f-center">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 3.67C7.41998 3.67 3.66998 7.42 3.66998 12C3.66998 16.58 7.41998 20.33 12 20.33C16.58 20.33 20.33 16.58 20.33 12C20.33 7.42 16.58 3.67 12 3.67ZM15.5 15.5L11.17 12.83V7.83H12.42V12.17L16.17 14.42L15.5 15.5V15.5Z" fill="white"/>
-                            </svg>
-                            <div class="box-more flex f-center">
-                                <p>나중에 볼 동영상</p>
+                </a>
+    
+                <a class="item">
+                    <div class="thumbnail">
+                        <img src="./imgs/thumbnail/thumbnail_11.jpg" alt="[최초공개] 아이즈원 (IZ*ONE) - Sequence (4K) | IZ*ONE One-reeler Premiere" class="thumbnail-img">
+                        <div class="mouseover d-hidden">
+                            <div class="box flex f-center">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 3.67C7.41998 3.67 3.66998 7.42 3.66998 12C3.66998 16.58 7.41998 20.33 12 20.33C16.58 20.33 20.33 16.58 20.33 12C20.33 7.42 16.58 3.67 12 3.67ZM15.5 15.5L11.17 12.83V7.83H12.42V12.17L16.17 14.42L15.5 15.5V15.5Z" fill="white"/>
+                                </svg>
+                                <div class="box-more flex f-center">
+                                    <p>나중에 볼 동영상</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="box flex f-center">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M9 10H18V12H9V10ZM6 6H18V8H6V6ZM12 14H18V16H12V14ZM6 12V18L10 15L6 12Z" fill="white"/>
-                            </svg>
-                            <div class="box-more flex f-center">
-                                <p>목록에 추가</p>
+                            <div class="box flex f-center">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 10H18V12H9V10ZM6 6H18V8H6V6ZM12 14H18V16H12V14ZM6 12V18L10 15L6 12Z" fill="white"/>
+                                </svg>
+                                <div class="box-more flex f-center">
+                                    <p>목록에 추가</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="info flex">
-                    <div>
-                        <img src="./imgs/channel/M2.jpg" alt="M2" width="36">
-                    </div>
-                    <div class="detail">
-                        <div class="item-title">
-                            <p>[입덕직캠] 아이즈원 김채원 직캠 4K ‘Sequence’ (IZ*ONE Kim Chaewon FanCam) | @IZ*ONE One-reeler Premiere</p>
+                    <div class="info flex">
+                        <div>
+                            <img src="./imgs/channel/M2.jpg" alt="M2" width="36">
                         </div>
-                        <div class="item-info">
-                            <div class="channel flex">
-                                <p>M2</p>
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM9.92 17.93L4.97 12.98L7.02 10.93L9.92 13.83L17.27 6.48L19.32 8.53L9.92 17.93Z" fill="#606060"/>
+                        <div class="detail">
+                            <div class="item-title">
+                                <p>[최초공개] 아이즈원 (IZ*ONE) - Sequence (4K) | IZ*ONE One-reeler Premiere</p>
+                            </div>
+                            <div class="item-info">
+                                <div class="channel flex">
+                                    <div class="tooltip">
+                                        <p>M2</p>
+                                        <div class="tooltip-box d-hidden">
+                                            <p>M2</p>
+                                        </div>
+                                    </div>
+                                    <div class="tooltip flex f-center">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM9.92 17.93L4.97 12.98L7.02 10.93L9.92 13.83L17.27 6.48L19.32 8.53L9.92 17.93Z" fill="#606060"/>
+                                        </svg>
+                                        <div class="tooltip-box d-hidden">
+                                            <p>인증됨</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p>조회수 143만회 • 4일 전</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="drop">
+                            <div class="more-dots button o-hidden">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 8C13.1 8 14 7.1 14 6C14 4.9 13.1 4 12 4C10.9 4 10 4.9 10 6C10 7.1 10.9 8 12 8ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10ZM12 16C10.9 16 10 16.9 10 18C10 19.1 10.9 20 12 20C13.1 20 14 19.1 14 18C14 16.9 13.1 16 12 16Z" class="icon-gray"/>
                                 </svg>
                             </div>
-                            <div>
-                                <p>조회수 4.7만회 • 5시간 전</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="drop">
-                        <div class="more-dots button o-hidden">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 8C13.1 8 14 7.1 14 6C14 4.9 13.1 4 12 4C10.9 4 10 4.9 10 6C10 7.1 10.9 8 12 8ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10ZM12 16C10.9 16 10 16.9 10 18C10 19.1 10.9 20 12 20C13.1 20 14 19.1 14 18C14 16.9 13.1 16 12 16Z" class="icon-gray"/>
-                            </svg>
-                        </div>
-                        <div class="drop-box right-box d-hidden">
-                            <div class="tab flex f-center">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9,10 L18,10 L18,12 L9,12 L9,10 Z M6,6 L18,6 L18,8 L6,8 L6,6 Z M12,14 L18,14 L18,16 L12,16 L12,14 Z M6,12 L6,18 L10,15 L6,12 Z" fill="#909090"/>
-                                </svg>
-                                <p>목록에 추가</p>
-                            </div>
-                            <div class="tab flex f-center">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 3.67c-4.58 0-8.33 3.75-8.33 8.33s3.75 8.33 8.33 8.33 8.33-3.75 8.33-8.33S16.58 3.67 12 3.67zm3.5 11.83l-4.33-2.67v-5h1.25v4.34l3.75 2.25-.67 1.08z" fill="#909090"/>
-                                </svg>
-                                <p>나중에 볼 동영상에 저장</p>
-                            </div>
-                            <div class="tab flex f-center">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M14 10H2v2h12v-2zm0-4H2v2h12V6zm4 8v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM2 16h8v-2H2v2z" fill="#909090"/>
-                                </svg>                                 
-                                <p>재생목록에 저장</p>
-                            </div>
-                            <div class="top-border">
+                            <div class="drop-box d-hidden">
                                 <div class="tab flex f-center">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8 0-1.85.63-3.55 1.69-4.9L16.9 18.31C15.55 19.37 13.85 20 12 20zm6.31-3.1L7.1 5.69C8.45 4.63 10.15 4 12 4c4.42 0 8 3.58 8 8 0 1.85-.63 3.55-1.69 4.9z" fill="#909090"/>
+                                        <path d="M9,10 L18,10 L18,12 L9,12 L9,10 Z M6,6 L18,6 L18,8 L6,8 L6,6 Z M12,14 L18,14 L18,16 L12,16 L12,14 Z M6,12 L6,18 L10,15 L6,12 Z" fill="#909090"/>
                                     </svg>
-                                    <p>관심 없음</p>
+                                    <p>목록에 추가</p>
                                 </div>
                                 <div class="tab flex f-center">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M7 11v2h10v-2H7zm5-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" fill="#909090"/>
-                                    </svg>                                   
-                                    <p>채널 추천 안함</p>
+                                        <path d="M12 3.67c-4.58 0-8.33 3.75-8.33 8.33s3.75 8.33 8.33 8.33 8.33-3.75 8.33-8.33S16.58 3.67 12 3.67zm3.5 11.83l-4.33-2.67v-5h1.25v4.34l3.75 2.25-.67 1.08z" fill="#909090"/>
+                                    </svg>
+                                    <p>나중에 볼 동영상에 저장</p>
                                 </div>
                                 <div class="tab flex f-center">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M14.4 6L14 4H5v17h2v-7h5.6l.4 2h7V6z" fill="#909090"/>
-                                    </svg>
-                                    <p>신고</p>
+                                        <path d="M14 10H2v2h12v-2zm0-4H2v2h12V6zm4 8v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM2 16h8v-2H2v2z" fill="#909090"/>
+                                    </svg>                                 
+                                    <p>재생목록에 저장</p>
+                                </div>
+                                <div class="top-border">
+                                    <div class="tab flex f-center">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8 0-1.85.63-3.55 1.69-4.9L16.9 18.31C15.55 19.37 13.85 20 12 20zm6.31-3.1L7.1 5.69C8.45 4.63 10.15 4 12 4c4.42 0 8 3.58 8 8 0 1.85-.63 3.55-1.69 4.9z" fill="#909090"/>
+                                        </svg>
+                                        <p>관심 없음</p>
+                                    </div>
+                                    <div class="tab flex f-center">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7 11v2h10v-2H7zm5-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" fill="#909090"/>
+                                        </svg>                                   
+                                        <p>채널 추천 안함</p>
+                                    </div>
+                                    <div class="tab flex f-center">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M14.4 6L14 4H5v17h2v-7h5.6l.4 2h7V6z" fill="#909090"/>
+                                        </svg>
+                                        <p>신고</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </a>
-
+                </a>
+    
+                <a class="item">
+                    <div class="thumbnail">
+                        <img src="./imgs/thumbnail/thumbnail_12.jpg" alt="[입덕직캠] 아이즈원 김채원 직캠 4K ‘Sequence’ (IZ*ONE Kim Chaewon FanCam) | @IZ*ONE One-reeler Premiere" class="thumbnail-img">
+                        <div class="mouseover d-hidden">
+                            <div class="box flex f-center">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 3.67C7.41998 3.67 3.66998 7.42 3.66998 12C3.66998 16.58 7.41998 20.33 12 20.33C16.58 20.33 20.33 16.58 20.33 12C20.33 7.42 16.58 3.67 12 3.67ZM15.5 15.5L11.17 12.83V7.83H12.42V12.17L16.17 14.42L15.5 15.5V15.5Z" fill="white"/>
+                                </svg>
+                                <div class="box-more flex f-center">
+                                    <p>나중에 볼 동영상</p>
+                                </div>
+                            </div>
+                            <div class="box flex f-center">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 10H18V12H9V10ZM6 6H18V8H6V6ZM12 14H18V16H12V14ZM6 12V18L10 15L6 12Z" fill="white"/>
+                                </svg>
+                                <div class="box-more flex f-center">
+                                    <p>목록에 추가</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info flex">
+                        <div>
+                            <img src="./imgs/channel/M2.jpg" alt="M2" width="36">
+                        </div>
+                        <div class="detail">
+                            <div class="item-title">
+                                <p>[입덕직캠] 아이즈원 김채원 직캠 4K ‘Sequence’ (IZ*ONE Kim Chaewon FanCam) | @IZ*ONE One-reeler Premiere</p>
+                            </div>
+                            <div class="item-info">
+                                <div class="channel flex">
+                                    <div class="tooltip">
+                                        <p>M2</p>
+                                        <div class="tooltip-box d-hidden">
+                                            <p>M2</p>
+                                        </div>
+                                    </div>
+                                    <div class="tooltip flex f-center">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM9.92 17.93L4.97 12.98L7.02 10.93L9.92 13.83L17.27 6.48L19.32 8.53L9.92 17.93Z" fill="#606060"/>
+                                        </svg>
+                                        <div class="tooltip-box d-hidden">
+                                            <p>인증됨</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p>조회수 4.7만회 • 5시간 전</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="drop">
+                            <div class="more-dots button o-hidden">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 8C13.1 8 14 7.1 14 6C14 4.9 13.1 4 12 4C10.9 4 10 4.9 10 6C10 7.1 10.9 8 12 8ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10ZM12 16C10.9 16 10 16.9 10 18C10 19.1 10.9 20 12 20C13.1 20 14 19.1 14 18C14 16.9 13.1 16 12 16Z" class="icon-gray"/>
+                                </svg>
+                            </div>
+                            <div class="drop-box d-hidden">
+                                <div class="tab flex f-center">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9,10 L18,10 L18,12 L9,12 L9,10 Z M6,6 L18,6 L18,8 L6,8 L6,6 Z M12,14 L18,14 L18,16 L12,16 L12,14 Z M6,12 L6,18 L10,15 L6,12 Z" fill="#909090"/>
+                                    </svg>
+                                    <p>목록에 추가</p>
+                                </div>
+                                <div class="tab flex f-center">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 3.67c-4.58 0-8.33 3.75-8.33 8.33s3.75 8.33 8.33 8.33 8.33-3.75 8.33-8.33S16.58 3.67 12 3.67zm3.5 11.83l-4.33-2.67v-5h1.25v4.34l3.75 2.25-.67 1.08z" fill="#909090"/>
+                                    </svg>
+                                    <p>나중에 볼 동영상에 저장</p>
+                                </div>
+                                <div class="tab flex f-center">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M14 10H2v2h12v-2zm0-4H2v2h12V6zm4 8v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM2 16h8v-2H2v2z" fill="#909090"/>
+                                    </svg>                                 
+                                    <p>재생목록에 저장</p>
+                                </div>
+                                <div class="top-border">
+                                    <div class="tab flex f-center">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8 0-1.85.63-3.55 1.69-4.9L16.9 18.31C15.55 19.37 13.85 20 12 20zm6.31-3.1L7.1 5.69C8.45 4.63 10.15 4 12 4c4.42 0 8 3.58 8 8 0 1.85-.63 3.55-1.69 4.9z" fill="#909090"/>
+                                        </svg>
+                                        <p>관심 없음</p>
+                                    </div>
+                                    <div class="tab flex f-center">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7 11v2h10v-2H7zm5-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" fill="#909090"/>
+                                        </svg>                                   
+                                        <p>채널 추천 안함</p>
+                                    </div>
+                                    <div class="tab flex f-center">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M14.4 6L14 4H5v17h2v-7h5.6l.4 2h7V6z" fill="#909090"/>
+                                        </svg>
+                                        <p>신고</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+    
+            </div>
         </div>
 
     </main>
