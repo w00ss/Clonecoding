@@ -1,3 +1,120 @@
+//check window width
+let navChanged = false;
+
+const longNav = document.querySelector('.long-nav');
+const shortNav = document.querySelector('.short-nav');
+
+function checkWindow() {
+    if(navChanged) {
+        if(window.innerWidth > 1300) {
+            longNav.classList.add('d-hidden');
+            shortNav.classList.remove('d-hidden');
+            main.classList.add('short-margin');
+            mainContainer.classList.add('short-main');
+        } else if(window.innerWidth > 1150) {
+            shortNav.classList.remove('d-hidden');
+            main.classList.add('short-margin');
+            mainContainer.classList.add('short-main');
+        } else if(window.innerWidth > 900) {
+            longNav.classList.add('d-hidden');
+            shortNav.classList.remove('d-hidden');
+            main.classList.add('short-margin');
+            mainContainer.classList.add('short-main');
+        } else if(window.innerWidth > 800) {
+            longNav.classList.add('d-hidden');
+            shortNav.classList.remove('d-hidden');
+            main.classList.add('short-margin');
+            mainContainer.classList.add('short-main');
+        } else if(window.innerWidth > 500) {
+            longNav.classList.add('d-hidden');
+            shortNav.classList.add('d-hidden');
+            main.classList.add('short-margin');
+            mainContainer.classList.add('short-main');
+        }
+    } else {
+        if(window.innerWidth > 1300) {
+            longNav.classList.remove('d-hidden');
+            shortNav.classList.add('d-hidden');
+            main.classList.remove('short-margin');
+            mainContainer.classList.remove('short-main');
+        } else if(window.innerWidth > 1150) {
+            shortNav.classList.remove('d-hidden');
+            main.classList.add('short-margin');
+            mainContainer.classList.add('short-main');
+        } else if(window.innerWidth > 900) {
+            longNav.classList.add('d-hidden');
+            shortNav.classList.remove('d-hidden');
+            main.classList.add('short-margin');
+            mainContainer.classList.add('short-main');
+        } else if(window.innerWidth > 800) {
+            longNav.classList.add('d-hidden');
+            shortNav.classList.remove('d-hidden');
+            main.classList.add('short-margin');
+            mainContainer.classList.add('short-main');
+        } else if(window.innerWidth > 500) {
+            longNav.classList.add('d-hidden');
+            shortNav.classList.add('d-hidden');
+            main.classList.add('short-margin');
+            mainContainer.classList.add('short-main');
+        }
+    }
+}
+
+window.addEventListener('resize', () => {
+    checkWindow();
+});
+
+
+//navigation toggle
+const navBtn = document.getElementById('menu');
+const main = document.querySelector('main');
+const mainContainer = document.querySelector('.main-container');
+const posts = document.querySelectorAll('.post');
+
+navBtn.addEventListener('click', () => {
+    if(window.innerWidth > 1150) {
+        navToggle();
+
+        if(navChanged) {
+            navChanged = false;
+        } else {
+            navChanged = true;
+        }
+    }
+});
+
+function navToggle() {
+    const navs = document.querySelectorAll('nav');
+
+    navs.forEach(nav => {
+        nav.classList.toggle('d-hidden');
+    });
+    items.forEach(item => {
+        item.classList.toggle('short-item');
+    });
+    posts.forEach(post => {
+        post.classList.toggle('short-item');
+    });
+    main.classList.toggle('short-margin');
+    mainContainer.classList.toggle('short-main');
+}
+
+//in navigation, more/less btn
+const navMoreBtn = document.querySelector('.more');
+const navLessBtn = document.querySelector('.less');
+const moreTabs = document.querySelector('.tab-more');
+
+navMoreBtn.addEventListener('click', () => {
+    moreTabs.classList.toggle('d-hidden');
+    navMoreBtn.classList.toggle('d-hidden');
+});
+
+navLessBtn.addEventListener('click', () => {
+    moreTabs.classList.toggle('d-hidden');
+    navMoreBtn.classList.toggle('d-hidden');
+});
+
+
 //itemBox
 const items = document.querySelectorAll('.item');
 
@@ -45,48 +162,6 @@ items.forEach(item => {
 
         }
     });
-});
-
-
-//navigation toggle
-const navBtn = document.getElementById('menu');
-const main = document.querySelector('main');
-const mainContainer = document.querySelector('.main-container');
-const posts = document.querySelectorAll('.post');
-
-navBtn.addEventListener('click', () => {
-    navToggle();
-});
-
-function navToggle() {
-    const navs = document.querySelectorAll('nav');
-
-    navs.forEach(nav => {
-        nav.classList.toggle('d-hidden');
-    });
-    items.forEach(item => {
-        item.classList.toggle('short-item');
-    });
-    posts.forEach(post => {
-        post.classList.toggle('short-item');
-    });
-    main.classList.toggle('short-margin');
-    mainContainer.classList.toggle('short-main');
-}
-
-//in navigation, more/less btn
-const navMoreBtn = document.querySelector('.more');
-const navLessBtn = document.querySelector('.less');
-const moreTabs = document.querySelector('.tab-more');
-
-navMoreBtn.addEventListener('click', () => {
-    moreTabs.classList.toggle('d-hidden');
-    navMoreBtn.classList.toggle('d-hidden');
-});
-
-navLessBtn.addEventListener('click', () => {
-    moreTabs.classList.toggle('d-hidden');
-    navMoreBtn.classList.toggle('d-hidden');
 });
 
 
@@ -229,3 +304,6 @@ notiTabs.forEach(tab => {
         dots.classList.add('o-hidden');
     });
 });
+
+
+//script load

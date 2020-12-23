@@ -119,6 +119,10 @@ header .button {
     padding: 2px;
 }
 
+.search-btn {
+    display: none;
+}
+
 #tools {
     margin-left: 40px;
 }
@@ -284,11 +288,9 @@ main {
 .item {
     display: inline-block;
     width: 100%;
-    min-width: 310px;
-    max-width: 360px;
     height: auto;
     margin: 0 8px 40px;
-    flex-basis: 25%;
+    flex-basis: calc(25% - 16px);
 }
 
 .thumbnail {
@@ -398,8 +400,7 @@ main {
     border: 1px solid #e0e0e0;
     background: #ffffff;
     width: 100%;
-    min-width: 310px;
-    max-width: 360px;
+    flex-basis: calc(25% - 16px);
     height: 210px;
     margin: 0 8px 24px;
     padding: 12px 24px;
@@ -659,7 +660,7 @@ div.tab {
 }
 
 .short-item {
-    flex-basis: 19%;
+    flex-basis: calc(20% - 16px);
 }
 
 .short-main {
@@ -702,4 +703,69 @@ header .tooltip-box {
     white-space: nowrap;
     z-index: 111;
     color: #ffffff;
+}
+
+.container {
+    display: flex;
+}
+
+@media (max-width: 1800px) {
+    .short-item {
+        flex-basis: calc(25% - 16px);
+    }
+}
+
+@media (max-width: 1300px) {
+    .long-nav {
+        display: none;
+    }
+
+    main {
+        margin: 56px 0 40px 72px;
+    }
+}
+
+@media (max-width: 1150px) {
+    .item, .post, .short-item {
+        flex-basis: calc(33% - 16px);
+    }
+}
+
+@media (max-width: 800px) {
+    .short-nav {
+        display: none;
+    }
+
+    .short-margin {
+        margin: 56px 0 72px;
+    }
+
+    .item, .post, .short-item {
+        flex-basis: calc(50% - 16px);
+    }
+}
+
+@media (max-width: 500px) {
+    .item, .post, .short-item {
+        flex-basis: calc(100% - 16px);
+    }
+}
+
+@media (max-width: 600px) {
+    #search-bar {
+        display: none;
+    }
+    .search-btn {
+        display: inline-block;
+    }
+}
+
+@media (max-width: 460px) {
+    .notification {
+        display: none;
+    }
+
+    header .button {
+        margin-right: 0;
+    }
 }
