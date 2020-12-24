@@ -70,15 +70,15 @@ header .button {
     margin-right: 8px;
 }
 
-#menu {
+.menu {
     margin-right: 16px;
 }
 
-#logo a, #logo img {
+.logo a, .logo img {
     height: 24px;
 }
 
-#logo sup {
+.logo sup {
     color: #606060;
     font-size: 10px;
     margin-top: -12px;
@@ -157,6 +157,58 @@ header .button {
 .long-nav:hover {
     overflow-y: auto;
     overscroll-behavior: contain;
+}
+
+.full-nav .nav-container {
+    position: fixed;
+    z-index: 1002;
+    background: #ffffff;
+    width: 240px;
+    height: 100%;
+}
+
+.full-nav .nav-container {
+    left: -240px;
+    transition: all 250ms ease-in-out;
+}
+
+.full-nav header {
+    width: 240px;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+    height: 56px;
+}
+
+.full-nav nav {
+    top: 56px;
+    bottom: 0px;
+    overflow: hidden;
+}
+
+.full-nav nav:hover {
+    overflow-y: auto;
+}
+
+.full-nav .head {
+    justify-content: flex-start;
+    align-items: center;
+    height: 56px;
+}
+
+.full-nav .menu {
+    margin-right: 16px;
+}
+
+.bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    z-index: 1001;
+    transition: all 250ms ease-in-out;
 }
 
 .short-tabs {
@@ -267,6 +319,7 @@ main {
     padding-top: 24px;
     max-width: 100%;
     overflow: hidden;
+    z-index: 10;
 }
 
 .main-container {

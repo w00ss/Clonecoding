@@ -3,6 +3,7 @@ let navChanged = false;
 
 const longNav = document.querySelector('.long-nav');
 const shortNav = document.querySelector('.short-nav');
+const fullNav = document.querySelector('.full-nav');
 
 function checkWindow() {
     if(navChanged) {
@@ -66,29 +67,38 @@ window.addEventListener('resize', () => {
 
 
 //navigation toggle
-const navBtn = document.getElementById('menu');
+const navBtn = document.querySelectorAll('.menu');
 const main = document.querySelector('main');
 const mainContainer = document.querySelector('.main-container');
 const posts = document.querySelectorAll('.post');
 
-navBtn.addEventListener('click', () => {
-    if(window.innerWidth > 1150) {
-        navToggle();
+const navContainer = fullNav.querySelector('.nav-container');
+const bg = fullNav.querySelector('.bg');
 
-        if(navChanged) {
-            navChanged = false;
+navBtn.forEach(btn => {
+    btn.addEventListener('click', () => {
+        if(window.innerWidth > 1300) {
+            navToggle();
+    
+            if(navChanged) {
+                navChanged = false;
+            } else {
+                navChanged = true;
+            }
         } else {
-            navChanged = true;
+            fullNavToggle();
         }
-    }
+    });
 });
 
-function navToggle() {
-    const navs = document.querySelectorAll('nav');
+bg.addEventListener('click', () => {
+    fullNavToggle();
+})
 
-    navs.forEach(nav => {
-        nav.classList.toggle('d-hidden');
-    });
+function navToggle() {
+    longNav.classList.toggle('d-hidden');
+    shortNav.classList.toggle('d-hidden');
+
     items.forEach(item => {
         item.classList.toggle('short-item');
     });
@@ -98,6 +108,29 @@ function navToggle() {
     main.classList.toggle('short-margin');
     mainContainer.classList.toggle('short-main');
 }
+
+function fullNavToggle() {
+    if(fullNav.classList.contains('d-hidden')) {
+        fullNav.classList.toggle('d-hidden');
+        document.body.style.overflow = 'hidden';
+
+        setTimeout(() => {
+            navContainer.style.left = '0';
+            bg.style.opacity = '1';
+        },200);
+    } else {
+        setTimeout(() => {
+            navContainer.removeAttribute('style');
+            bg.removeAttribute('style');
+            document.body.removeAttribute('style');
+        },100);
+
+        setTimeout(() => {
+            fullNav.classList.toggle('d-hidden');
+        },200);
+    }
+}
+
 
 //in navigation, more/less btn
 const navMoreBtn = document.querySelector('.more');
@@ -307,3 +340,4 @@ notiTabs.forEach(tab => {
 
 
 //script load
+checkWindow();
